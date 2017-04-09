@@ -3,6 +3,42 @@
 <head>
 	<meta charset="UTF-8">
 	<title>个人主页1</title>
+
+	<style>
+	@import url(http://fonts.googleapis.com/css?family=Oswald:300|Open+Sans:700,400);
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/*
+	=================================================================================================
+		Base styles.
+	=================================================================================================
+*/
+html {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+::selection {
+  background-color: #2FC5CC;
+}
+
+::-moz-selection {
+  background-color: #2FC5CC;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
 	<script>
 	'use strict';
 
@@ -252,41 +288,6 @@ $(function() {
 });
 
 	</script>
-	<style>
-	@import url(http://fonts.googleapis.com/css?family=Oswald:300|Open+Sans:700,400);
-html {
-  box-sizing: border-box;
-}
-
-*, *::after, *::before {
-  box-sizing: inherit;
-}
-
-/*
-	=================================================================================================
-		Base styles.
-	=================================================================================================
-*/
-html {
-  margin: 0;
-  padding: 0;
-  overflow: auto;
-}
-
-::selection {
-  background-color: #2FC5CC;
-}
-
-::-moz-selection {
-  background-color: #2FC5CC;
-}
-
-* {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
   background-color: #0e393b;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 16px;
