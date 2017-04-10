@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>定位</title>
+		<style type="text/css">
+			body{
+				padding: 0;
+				margin: 0;
+				min-height: 10000px;
+			}
+			div{
+				border: 1px solid #000;
+				margin: 40px;
+			}
+			.ff{
+				width: 500px;
+				height: 500px;
+				position: relative;
+			}
+			.f{
+				width: 400px;
+				/*height: 400px;*/
+				position: relative;
+			}
+			.s{
+				width: 100px;
+				height: 100px;
+				margin: 20px;
+			}
+			.s:nth-child(1){
+				background-color: #f00;
+				position: relative;
+				left: 10px;
+				top: 10px;
+				z-index: 2;
+			}
+			.s:nth-child(2){
+				background-color: #0f0;
+				/*position: relative;
+				left: 20px;
+				top: 30px;*/
+				/*position: absolute;
+				left: 50px;
+				top: 50px;*/
+				/*position: fixed;
+				right: 20px;
+				top: 20px;*/
+				position: absolute;
+				left: 20px;
+				top: 20px;
+				z-index: 1;
+			}
+			.s:nth-child(3){
+				background-color: #00f;
+				z-index: 100;
+			}
+		</style>
+	</head>
+	<body>
+<!--
+	定位
+		该定位方式是否脱离常规流
+		该定位方式参考原点（定位的基准）是什么
+	
+	position
+		static 静态定位 默认值    left right top bottom四个值无效
+		
+		relative 相对定位
+			不脱离常规流
+			定位基准，该元素原来的位置
+			覆盖常规流里的元素
+		
+		absolute 绝对定位
+			脱离常规流
+			定位基准，最近的定位祖先元素
+				祖先元素： 包含元素
+				定位元素：设置了position属性，并且取值不是static的元素
+				最近，    自身开始往上找，最近的。 亲缘关系最近的。
+			覆盖常规流里的元素
+		
+		fixed 固定定位
+			脱离常规流
+			定位基准，浏览器窗口
+			覆盖常规流里的元素
+		
+		center 
+		page
+		sticky  js
+		
+	偏移属性
+		left   左边空多少
+		right
+		top
+		bottom
+	
+	z-index  层叠顺序  (适用于定位元素)
+		默认值  0
+		默认后出现的覆盖先出现的
+		数字越大，越靠上（离我们越近）
+		
+	
+	居中
+		文字的水平居中
+			text-align:center
+		单行文本的垂直居中
+			line-height=height
+		文本的垂直居中
+			vertical-align 内联元素或td th
+		块元素的水平居中
+			width取值不能为auto
+			水平方向的margin为auto
+		块元素的水平垂直居中
+			1. 绝对定位，left和top设置为50%
+			   margin设置为负值，宽和高的一半，进行偏移
+			   	
+			   	position: absolute;
+				left: 50%;
+				top: 50%;
+				margin: -60px 0px 0px -80px;
+				
+			2. margin auto
+			   position absolute
+			   left right top bottom 0
+			   代码如下
+			    margin: auto;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+-->
+	<div class="ff">
+		<div class="f">
+			<div class="s"></div>
+			<div class="s"></div>
+			<div class="s"></div>
+		</div>
+	</div>
+	</body>
+</html>
