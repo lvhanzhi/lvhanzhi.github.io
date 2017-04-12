@@ -10,3 +10,11 @@ h1{
 	float:right;
 	margin-right:120px;
 }
+ul li{
+	list-style:none;
+	
+	
+}
+a{
+	text-decoration: none;
+}
