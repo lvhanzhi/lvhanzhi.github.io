@@ -2,7 +2,7 @@ h1{
 	text-align:center;
 }
 #tu1{
-	position:relative;
-	bottom:80px;
-	height:300px;
+	position:ablsolute;
+	margin:-80px 0px;
+	height:258px;
 }
