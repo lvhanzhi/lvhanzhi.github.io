@@ -2,9 +2,12 @@
 	color:blue;
 	text-decoration: none;
 }
+.jiben a:visited{
+	color:pink;
+}
 .jiben a:hover{
 	color:red;
 }
-.jiben a:visited{
-	color:pink;
+.jiben a:active{
+	color:green;
 }
