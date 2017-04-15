@@ -1,0 +1,10 @@
+.jiben a:link{
+	color:blue;
+	text-decoration: none;
+}
+.jiben a:hover{
+	color:red;
+}
+.jiben a:visited{
+	color:pink;
+}
