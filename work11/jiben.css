@@ -1,7 +1,9 @@
+/*未被访问前的样式*/
 .jiben a:link{
 	color:blue;
 	text-decoration: none;
 }
+/*已被访问过时的样式*/
 .jiben a:visited{
 	color:pink;
 }
