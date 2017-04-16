@@ -1,3 +1,8 @@
+.jiben{
+	height:20px;
+	width:200px;
+	/*border: 1px solid red;*/
+}
 /*未被访问前的样式*/
 .jiben a:link{
 	color:blue;
@@ -7,9 +12,11 @@
 .jiben a:visited{
 	color:pink;
 }
+/*鼠标悬停时的样式*/
 .jiben a:hover{
 	color:red;
 }
+/*在鼠标点击与释放之间发生的事件*/
 .jiben a:active{
 	color:green;
 }

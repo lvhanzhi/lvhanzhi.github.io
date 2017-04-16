@@ -4,10 +4,44 @@
 		<meta charset="UTF-8">
 		<title>超链接样式测试</title>
 		<link rel="stylesheet" type="text/css" href="jiben.css"/>
+		<link rel="stylesheet" type="text/css" href="putong.css" />
+		<link rel="stylesheet" type="text/css" href="kuai.css" />
 	</head>
 	<body>
 		<div class="jiben">
 			<a href="http://www.baidu.com" target="_blank">百度</a>
 		</div>
+		<div class="putong">
+			<a href="underline" class="underline">underline</a>
+			<a href="http://www.baidu.com" id="color" target="_blank">color switching</a>
+			<a href="http://www.baidu.com" class="high" target="_blank">highlighter</a>
+		</div>
+		
+		<div class="content-wrapper">
+  		<a class="action-link blip-link black" href="#">
+    	<div class="link-content">View Page</div>
+    	<div class="blip"></div>
+    	<div class="blip-click"></div>
+  		</a>
+	</div>
+	<a class="action-link blip-link red" href="#">
+    <div class="link-content">View Page</div>
+    <div class="blip"></div>
+    <div class="blip-click"></div>
+  </a>
+	<script>var blipDim = '400px';
+
+$('.blip-link').click(function(event){
+  event.preventDefault();
+  $('.blip-click', this).width(blipDim).height(blipDim);
+  $('.link-content', this).addClass('clicked');
+});
+
+$('.blip-link').mouseleave(function(){
+  if($('.link-content', this).hasClass('clicked')) {
+    $('.blip-click', this).width(0).height(0);
+    $('.link-content', this).removeClass('clicked');
+  }
+});</script>
 	</body>
 </html>
