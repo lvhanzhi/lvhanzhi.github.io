@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.action-link {
+  display: block;
+  margin: 0 auto 30px;
+  position: relative;
+  background: #fff;
+  border: 1px solid #9e9e9e;
+  color: #707070;
+  padding: 20px 30px;
+  overflow: hidden;
+  max-width: 100px;
+}
+.action-link .link-content {
+  position: relative;
+  z-index: 3;
+  -webkit-transition: color 0.35s;
+  transition: color 0.35s;
+  font-weight: 300;
+}
+.blip-link .blip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.blip-link .blip-click {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
+}
+
+.blip-link:hover .blip {
+  width: 375px;
+  height: 375px;
+}
+
+.blip-link.red .blip {
+  background: #d63e3e;
+}
+.blip-link.red {
+  border-color: #d63e3e;
+}
+.blip-link.red .blip {
+  background: #d63e3e;
+}
+.blip-link.red .blip-click {
+  background: #fff;
+}
+.blip-link.red .link-content {
+  color: #d63e3e;
+}
+.blip-link.red:hover .link-content {
+  color: #fff;
+}
+
+</style>
+</head>
+<body>
+	 <a class="action-link blip-link red" href="#">
+    <div class="link-content">View Page</div>
+    <div class="blip"></div>
+    <div class="blip-click"></div>
+  </a>
+	<script>var blipDim = '400px';
+
+$('.blip-link').click(function(event){
+  event.preventDefault();
+  $('.blip-click', this).width(blipDim).height(blipDim);
+  $('.link-content', this).addClass('clicked');
+});
+
+$('.blip-link').mouseleave(function(){
+  if($('.link-content', this).hasClass('clicked')) {
+    $('.blip-click', this).width(0).height(0);
+    $('.link-content', this).removeClass('clicked');
+  }
+});</script>
+</body>
+</html>
