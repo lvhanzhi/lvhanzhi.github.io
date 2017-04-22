@@ -1,0 +1,35 @@
+nav{
+	height:70px;
+	width:100%;
+	background-color:#FFA500;
+}
+a{
+	font-family: "微软雅黑";
+	font-size:18px;
+	text-decoration: none;
+	line-height: 70px;
+	color:black;
+	display: block;
+	width:200px;
+	height:70px;
+	text-indent: 30px;
+}
+ul{
+	list-style-type:none;
+	margin:auto;
+	
+}
+ul li{
+	float:left;
+	display:block;
+	border-left:1px solid rgba(0, 0, 0, 0.2);
+}
+li:nth-child(3){
+	border-right:1px solid rgba(0, 0, 0, 0.2);
+}
+.clearfix{
+	content: "";
+	display: table;
+	clear:both;
+}
+
