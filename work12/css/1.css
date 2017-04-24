@@ -37,7 +37,7 @@ i{
 	position:relative;
 	right:10px;
 }
-i:hover{
+a:hover i{
 	opacity:1;
 	transition:all .6s;
 }
