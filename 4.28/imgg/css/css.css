@@ -1,0 +1,55 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.imgList{
+	max-width: 1200px;
+	min-width: 800px;
+	margin: auto;
+}
+.imgList figure{
+	float: left;
+	margin: calc(10%/6);
+	width: 30%;
+	position: relative;
+	/*overflow: hidden;*/
+}
+.imgList figure img{
+	width: 100%;
+}
+.imgList figure figcaption{
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	top: 20px;
+	bottom: 20px;
+	z-index: 1;
+	border: 1px solid #fff;
+	outline: 20px solid rgba(0,0,0,.8);
+	transition: all .5s;
+	color: #fff;
+}
+.imgList figure:hover figcaption{
+	left: 10px;
+	right: 10px;
+	top: 10px;
+	bottom: 10px;
+	outline: 10px solid rgba(0,0,0,.2);
+}
+/*
+ z-index  设置某个对象的垂直层次，适用于定位元素（应用过position属性的元素）
+ * */
+.imgList figure figcaption h3{
+	/*margin-top: 25%;*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	opacity: 1;
+	transition: all .5s;
+	margin: 0;
+}
+.imgList figure:hover figcaption h3{
+	/*opacity: 1;*/
+}
