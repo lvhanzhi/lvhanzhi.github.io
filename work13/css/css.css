@@ -1,0 +1,38 @@
+.clearfix::after{
+	content: "";
+	display: block;
+	clear:both;
+}
+.imgList{
+	max-width:1200px;
+	margin:auto;
+}
+.imageList *{
+	box-sizing: border-box;
+	}
+.imgList figure{
+	width:30%;
+	float:left;
+	overflow: hidden;
+	margin:calc(10%/6);
+	border:10px solid rgb(255,255,255);
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.4);
+	position:relative;
+}
+.imgList figure img{
+	width: 100%;
+	overflow: hidden;
+	transform: scale(1);
+	transition: all 0.4s;
+}
+.imgList figure h3,
+.imgList figure p{
+	position:absolute;
+	z-index: 1;
+}
+.imgList figure img:hover{
+	transform: scale(1.5) rotate(5deg);
+}
+.imgList figure::before{
+	
+}
