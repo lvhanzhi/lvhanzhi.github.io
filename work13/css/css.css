@@ -1,38 +1,103 @@
 .clearfix::after{
-	content: "";
-	display: block;
+	content:"";
+	display:table;
 	clear:both;
+}
+.imgList *{
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
 }
 .imgList{
 	max-width:1200px;
 	margin:auto;
 }
-.imageList *{
+.imgList *{
 	box-sizing: border-box;
-	}
+}
 .imgList figure{
 	width:30%;
 	float:left;
-	overflow: hidden;
+	overflow:hidden;
 	margin:calc(10%/6);
-	border:10px solid rgb(255,255,255);
-	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.4);
+	border: 10px solid rgb(255,255,255);
+	box-shadow: 0 1px 8px 0 rgba(0,0,0,0.4);
 	position:relative;
-}
-.imgList figure img{
-	width: 100%;
-	overflow: hidden;
-	transform: scale(1);
-	transition: all 0.4s;
 }
 .imgList figure h3,
 .imgList figure p{
-	position:absolute;
-	z-index: 1;
+	position: absolute;
+	z-index: 2;
 }
-.imgList figure img:hover{
-	transform: scale(1.5) rotate(5deg);
+.imgList figure img{
+	transition: all 0.4s;
+	width:100%;
+	overflow: :hidden;
+	transform: scale(1);
+	transition: all .4s; 
 }
-.imgList figure::before{
-	
+
+.imgList figure:hover img{
+	width:100%;
+	transform: scale(1.2) rotate(6deg);
+}
+.imgList figure figcaption{
+	border: 1px solid #fff;
+	position: absolute;
+	width:60%;
+	height:30%;
+	z-index: 3;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	margin: auto;
+	border-bottom:none;
+}
+.imgList figure figcaption h3,
+.imgList figure figcaption p{
+	color: #fff;
+	/*opacity: 0;*/
+}
+.imgList figure figcaption::before,
+.imgList figure figcaption::after{
+	content: "";
+	position: absolute;
+	width:50%;
+	height:1px;
+	background-color: #fff;
+	bottom:0;
+	transition: all .4s;
+}
+.imgList figure figcaption::after{
+	right:0;
+}
+.imgList figure:hover figcaption::before,
+.imgList figure:hover figcaption::after{
+	content: "";
+	position: absolute;
+	width:20%;
+	height:1px;
+	background-color: #fff;
+	bottom:0;
+}
+.imgList figure figcaption h3{
+	position: relative;
+	top:10px;
+	left:55px;
+	opacity: 0;
+	transform: all .4s;
+}
+.imgList figure figcaption p{
+	position: absolute;
+	top:50px;
+	left:50px;
+	opacity: 0;
+	transform: all .4s;
+}
+.imgList figure:hover figcaption h3,
+.imgList figure:hover figcaption p{
+	opacity: 1;
 }
