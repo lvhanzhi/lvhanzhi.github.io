@@ -1,0 +1,28 @@
+table{
+	border-collapse: collapse;
+	width:500px;
+	height:250px;
+}
+th,td{
+	border:1px solid rgba(0,0,0,0.2);
+	text-align: center;
+}
+tfoot tr td{
+	color: rgba(0,0,0,0.2);
+}
+thead{
+	background-color: rgba(0,0,200,0.25);
+	color: rgb(255,255,255);
+}
+tbody td{
+	color: #669900;
+}
+tbody tr:nth-child(2n){
+	background-color: #E5E5E5;
+}
+tbody tr:hover{
+	background-color: #aaa;
+}
+tbody tr:hover td{
+	color:rgba(0,0,200,1);
+}
