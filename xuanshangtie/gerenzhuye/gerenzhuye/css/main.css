@@ -99,11 +99,13 @@ body{
 
 .head_nav{
     margin: 0 auto;
+    position: relative;
+    right: 90px;
 }
 
 .head_nav ul li{
-    float: left;
-    margin-right: 55px;
+    float:left;
+    margin-right: 120px;
     cursor: pointer;
     font-size: 16px;
 }
@@ -120,9 +122,12 @@ body{
 .head_nav ul li a:hover{
     color:#4b91c9;
 }
-
+.title_h2{
+	position: relative;
+	top: 80px;
+}
 .wrapBox{
-    top: 0;
+    top:0;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -150,7 +155,7 @@ body{
 .box01_content{  
     position: absolute;
     z-index: 3;
-    top: 13%;
+    top: 30%;
     left: 10%;
     width: 80%;
 }
@@ -549,7 +554,7 @@ body{
     font-size: 20px;
     font-weight: lighter;
     color: #ffffff;
-    line-height: 38px;
+    line-height: 45px;
     text-align: center;
     position: relative;
     right: -100%;
@@ -572,9 +577,9 @@ body{
 
 .timeUl{
     height: 100%;
-    width: 160%;
+    width: 150%;
     position: relative;
-    left: 0;
+    left: 0px;
     -webkit-transition: all ease 0.8s;
     -moz-transition: all ease 0.8s;
     -ms-transition: all ease 0.8s;
@@ -599,10 +604,11 @@ body{
 }
 
 .timeUl li{
-    width: 25%;
+    width: 17%;
     float: left;
     height: 100%;
     position: relative;
+    left: 140px;
 }
 
 .timeUl li::before{
@@ -1388,7 +1394,7 @@ body{
     }
     
     .foot_info_main ul li{
-        width: 45%;
+        width: 50%;
         margin: 0px 0 0.2rem 0;
     }
     
