@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style type="text/css">
+		
+		.clearfix{
+			content: "";
+			display: table;
+			clear:both ;
+		}
+			input{
+				display: none;
+			}
+			label{
+				display: inline-block;
+				width: 60px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				background-color: #fdd;
+				
+			}
+			label:nth-child(2){
+				background-color:#dfd;
+			}
+			label:nth-child(3){
+				background-color:#ddf;
+			}
+			.all1{
+				width: 1800px;
+				height: 400px;
+				transition: all .5s;
+				position: absolute;
+				
+			}
+			.all{
+				width:200px;
+				height: 200px;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			#con1,#con2,#con3{
+				width:200px;
+				height:200px;
+				float:left;
+			}
+			#con1{
+				background-color: #fdd;
+			}
+			#con2{
+				background-color: #dfd;
+			}
+			#con3{
+				background-color: #ddf;
+			}
+			#table1:checked~.all .all1 #con1{
+				display: block;
+			}
+			#table2:checked~.all .all1 #con2{
+				display: block;
+			}
+			#table3:checked~.all .all1 #con3{
+				display: block;
+			}
+			#table1:checked~.all .all1{
+				left: 0;
+			}
+			#table2:checked~.all .all1{
+				left: -200px;
+			}
+			#table3:checked~.all .all1{
+				left: -400px;
+			}
+			
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<input type="radio" checked="checked" name="tabs" id="table1" />
+		<input type="radio" name="tabs" id="table2"/>
+		<input type="radio" name="tabs" id="table3"/>
+		<div id="lab">
+			<label for="table1" id="1">首页</label><label for="table2" id="2">公告</label><label for="table3" id="3">通知</label>
+		</div>
+		<div class="all">
+			<div class="all1 clearfix">
+				<div id="con1">table1</div>
+				<div id="con2">table2</div>
+				<div id="con3">table3</div>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
