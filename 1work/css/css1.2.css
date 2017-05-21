@@ -84,6 +84,10 @@ main section .xiang figure{
 main section .xiang figure a img{
 	position: relative;
 	width:250px;
+	-webkit-filter: grayscale(100%); 
+	-moz-filter: grayscale(100%); 
+	-ms-filter: grayscale(100%); 
+	-o-filter: grayscale(100%); 
 	filter: grayscale(40%);
 	filter: gray; 
 	transition: all 0.5s;
