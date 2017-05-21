@@ -1,0 +1,101 @@
+*{
+	transition: all 0.5s;
+}
+.clearfix::after{
+	content:"";
+	display: block;
+	clear: both;
+}
+ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+body{
+	background: url("man-relax-couch-study.jpg") no-repeat scroll;
+	background-attachment:fixed ;
+	background-size: 1550px;
+}
+.zong{
+	max-width: 1200px;
+	margin: auto;
+	margin-top:30px ;
+}
+/*header的css*/
+/*第一个section*/
+header nav{
+	position:absolute;
+	top:50px;
+	right:200px;
+}
+header a img{
+	width:100px;
+}
+header nav ul li{
+	float: left;
+}
+header nav ul li a{
+	padding:30px 30px;
+	border: 1px solid rgba(0,0,0,0);
+	margin-left:40px ;
+}
+header nav ul li a:hover{
+	border: 1px solid rgba(0,0,0,1);
+}
+header h2{
+	line-height: 50px;
+}
+header p{
+	line-height: 25px;
+}
+/*main的css*/
+main .s1 ul li{
+	float: left;
+	margin: 25px 10px;
+}
+main .s1 ul li a{
+	background-color:rgba(230,224,207,0.4);
+	padding:20px 76px;
+	border-radius: 10px;
+}
+main .s1 ul li a:hover{
+	background-color:rgba(230,224,207,1);
+	border-radius: 0px;
+}
+/*第二个section*/
+main .s2 figure{
+	position: relative;
+}
+main .s2 figure figcaption{
+	position: absolute;
+	z-index: 1;
+	margin: 30% 35%;
+	color: #FDA400;
+	opacity: 0;
+}
+main .s2 figure:hover figcaption{
+	opacity: 1;
+}
+main .s2 figure{
+	float: left;
+}
+main .s2 figure a img{
+	width:300px;
+	filter: grayscale(70%);
+	filter: gray;
+}
+main .s2 figure a:hover img{
+	filter: grayscale(0);
+}
+/*footer的css*/
+footer div a{
+	position: fixed;
+	padding: 20px;
+	margin-bottom:-50px ;	
+	border: 1px solid red;
+	z-index: 2;
+}
