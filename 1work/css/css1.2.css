@@ -84,15 +84,19 @@ main section .xiang figure{
 main section .xiang figure a img{
 	position: relative;
 	width:250px;
-	-webkit-filter: grayscale(100%); 
-	-moz-filter: grayscale(100%); 
-	-ms-filter: grayscale(100%); 
-	-o-filter: grayscale(100%); 
+	-webkit-filter: grayscale(40%); 
+	-moz-filter: grayscale(40%); 
+	-ms-filter: grayscale(40%); 
+	-o-filter: grayscale(40%); 
 	filter: grayscale(40%);
 	filter: gray; 
 	transition: all 0.5s;
 }
 main section .xiang figure:hover a img{
+	-webkit-filter: grayscale(0); 
+	-moz-filter: grayscale(0); 
+	-ms-filter: grayscale(0); 
+	-o-filter: grayscale(0);
 	filter: grayscale(0); 
 }
 main section .xiang figure figcaption{
