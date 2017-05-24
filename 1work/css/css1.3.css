@@ -26,6 +26,10 @@ header,main,footer{
 }
 header a img{
 	max-width:90px;
+	transition: all 0.5s;
+}
+header a img:hover{
+	transform:rotate(30deg);
 }
 header nav{
 	width:600px;
@@ -47,7 +51,7 @@ header nav ul li a{
 	color: white;
 	font-size: 25px;
 	padding: 20px 30px;
-	border:1px solid rgba(255,220,110,0);
+	border:1px dotted rgba(255,220,110,0);
 	text-align: center;
 	transition: all 0.6s; 
 }
