@@ -15,6 +15,9 @@ a{
 	text-decoration: none;
 	color: #000;
 }
+h2{
+	margin: 50px 0px 0 0;
+}
 body{
 	background: url("man-relax-couch-study.jpg") no-repeat scroll;
 	background-attachment:fixed ;
@@ -90,6 +93,40 @@ main .s2 figure a img{
 }
 main .s2 figure a:hover img{
 	filter: grayscale(0);
+}
+/*s3的css*/
+.s3 dt,.s3 dd{
+	display: inline-block;
+	padding: 7px 40px;
+	background-color: #fff;
+}
+.s3 dd{
+	background-color: #000;
+	color: #fff;
+	margin-left: 0;
+	margin-right: 40px;
+}
+.s3 form input,.s3 form select{
+	padding: 15px 150px 15px 10px;
+	margin-right:70px ;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+}
+.s3 form select{
+	margin-right:0px ;
+}
+.s3 textarea{
+	margin: 5px 20px 0 0;
+	padding: 15px 250px 0px 10px;
+	position: relative;
+	top:20px;
+}
+.s3 form input[type="submit"]{
+	padding: 0;
+	width: 500px;
+	height: 50px;
+	background-color: lightgoldenrodyellow;
 }
 /*footer的css*/
 footer div a{
