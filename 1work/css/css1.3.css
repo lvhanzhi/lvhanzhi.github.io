@@ -9,6 +9,9 @@ a{
 ul{
 	list-style-type:none ;
 }
+h2{
+	margin-top: 70px ;
+}
 body{
 	background: url("../img/266_1.jpg") no-repeat scroll  ;
 	background-size:1600px ;
