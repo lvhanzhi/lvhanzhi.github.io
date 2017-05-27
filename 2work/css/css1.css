@@ -1,0 +1,54 @@
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+a{
+	text-decoration: none;
+	
+}
+ul{
+	list-style-type: none;
+}
+
+/*header star*/
+
+header .top{
+	width: 1200px;
+	margin: auto;
+	
+	
+}
+header .logo{
+	float: left;
+	position: fixed;
+}
+header .logo a span{
+	font-size:50px ;
+	font-family: 'Dancing Script', cursive;
+	color:blue;
+	position: relative;
+	bottom: 10px;
+}
+header .menu{
+	float: right;
+}
+header .menu ul li{
+	float: left;
+	padding-left:40px ;
+}
+/*header end*/
+/*main star*/
+main .home{
+	height: 800px;
+	
+	background: url("../img/banner.jpg") no-repeat scroll top left;
+	margin-top:-70px ;
+}
+main .home h2{
+	line-height: 800px;
+}
+/*首页 star*/
+
+/*首页 end*/
+/*main end*/
