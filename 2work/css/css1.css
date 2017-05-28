@@ -10,44 +10,47 @@ a{
 ul{
 	list-style-type: none;
 }
-
-/*header star*/
-
-header .top{
+.zong{
 	width: 1200px;
-	margin: auto;
-	
-	
+	margin: 0 auto;
 }
-header .logo{
-	float: left;
+*{
+	transition: all 0.5s;
+}
+/*header star*/
+header .top{
 	position: fixed;
+	padding-top:20px ;
+	width: 1200px;
 }
-header .logo a span{
-	font-size:50px ;
+.top .logo{
+	float: left;
+}
+.top .logo a img{
+	vertical-align: middle;
+}
+.top .logo a span{
+	font-size: 50px;
 	font-family: 'Dancing Script', cursive;
-	color:blue;
-	position: relative;
-	bottom: 10px;
+	vertical-align: middle;
+	color: #fff;
 }
-header .menu{
+.top .menu{
 	float: right;
 }
-header .menu ul li{
+.menu ul li{
 	float: left;
-	padding-left:40px ;
+	padding-left:50px ;
+}
+.menu ul li a{
+	color: #fff;
+}
+.menu ul li a:hover{
+	color: deepskyblue;
 }
 /*header end*/
 /*main star*/
-main .home{
-	height: 800px;
-	
-	background: url("../img/banner.jpg") no-repeat scroll top left;
-	margin-top:-70px ;
-}
-main .home h2{
-	line-height: 800px;
-}
+
 /*首页 star*/
 
 /*首页 end*/
