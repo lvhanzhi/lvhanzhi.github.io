@@ -1,0 +1,86 @@
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+a{
+	text-decoration: none;
+	
+}
+ul{
+	list-style-type: none;
+}
+.zong{
+	width: 1200px;
+	margin: 0 auto;
+}
+*{
+	transition: all 0.5s;
+}
+/*header star*/
+header.on{
+	padding: 3px 0;
+	background-color: rgba(0,0,0,.8);
+}
+header .top{
+	position: fixed;
+	padding-top:20px ;
+	width: 1200px;
+}
+.top .logo{
+	float: left;
+}
+.top .logo a img{
+	vertical-align: middle;
+}
+.top .logo a span{
+	font-size: 50px;
+	font-family: 'Dancing Script', cursive;
+	vertical-align: middle;
+	color: #fff;
+}
+.top .menu{
+	float: right;
+}
+.menu ul li{
+	float: left;
+	padding-left:50px ;
+	margin-top:10px ;
+}
+.menu ul li a{
+	color: #fff;
+}
+.menu ul li a:hover{
+	color: deepskyblue;
+}
+/*header end*/
+/*main star*/
+
+/*首页 star*/
+main .home .text{
+	max-width: 800px;
+	height: 180px;
+	margin: auto;
+	line-height: 30px;
+	/*text-shadow: 1px 1px 1px rgba(0,0,0,.8);*/
+	position:absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: #fff;
+}
+.text h1{
+	text-align: center;
+}
+.text h1 span{
+	color: deepskyblue;
+}
+.text p mark{
+	padding: 5px;
+	background-color: rgba(255,255,255,0.4);
+}
+/*首页 end*/
+/*关于sta*/
+
+/*main end*/
