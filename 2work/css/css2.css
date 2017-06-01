@@ -3,84 +3,88 @@
 	display: block;
 	clear: both;
 }
-a{
-	text-decoration: none;
-	
+*{
+	box-sizing: border-box;
 }
 ul{
+	padding: 0;
+	margin: 0;
 	list-style-type: none;
 }
-.zong{
-	width: 1200px;
-	margin: 0 auto;
+a{
+	text-decoration: none;
 }
-*{
-	transition: all 0.5s;
+body{
+	min-height: 1400px;
 }
 /*header star*/
+header .container{
+	position: relative;
+	max-width: 1200px;
+	margin: auto;
+}
+header{
+	width: 100%;
+	padding: 20px 0px;
+	position: fixed;
+	z-index: 999;
+	transition: all .5s;
+}
 header.on{
 	padding: 3px 0;
-	background-color: rgba(0,0,0,.8);
+	background-color: rgba(0,0,0,.7);
 }
-header .top{
-	position: fixed;
-	padding-top:20px ;
-	width: 1200px;
-}
-.top .logo{
+.container .logo{
 	float: left;
 }
-.top .logo a img{
+.container .logo a img{
 	vertical-align: middle;
 }
-.top .logo a span{
-	font-size: 50px;
-	font-family: 'Dancing Script', cursive;
-	vertical-align: middle;
+.container .logo a span{
 	color: #fff;
+	vertical-align: middle;
+	font-size: 45px;
+	font-family:"Dancing Script";
 }
-.top .menu{
+.container nav{
 	float: right;
 }
-.menu ul li{
+.container nav ul li{
 	float: left;
-	padding-left:50px ;
-	margin-top:10px ;
+	padding:25px 40px 10px 20px;
 }
-.menu ul li a{
+.container nav ul li a{
+	transition: all .5s;
 	color: #fff;
 }
-.menu ul li a:hover{
+.container nav ul li a:hover{
 	color: deepskyblue;
 }
 /*header end*/
 /*main star*/
-
-/*首页 star*/
-main .home .text{
-	max-width: 800px;
-	height: 180px;
-	margin: auto;
-	line-height: 30px;
-	/*text-shadow: 1px 1px 1px rgba(0,0,0,.8);*/
-	position:absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	color: #fff;
+/*banner star*/
+main .banner{
+	background: url(../img/banner.jpg) no-repeat center top;
 }
-.text h1{
+main .banner .caption{
+	width: 800px;
+	height: 180px;
+	position: absolute;
+	top: 40%;
+	left:23%;
+	color: #fff;
+	line-height: 30px;
+}
+main .banner .caption h1{
 	text-align: center;
 }
-.text h1 span{
+main .banner .caption h1 span{
 	color: deepskyblue;
 }
-.text p mark{
-	padding: 5px;
-	background-color: rgba(255,255,255,0.4);
+main .banner .caption p mark{
+	color: #000;
+	background-color:rgba(255,255,255,0.4) ;
+	padding:5px;
 }
-/*首页 end*/
-/*关于sta*/
-
+/*banner end*/
 /*main end*/
