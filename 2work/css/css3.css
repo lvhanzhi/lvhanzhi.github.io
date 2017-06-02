@@ -91,7 +91,6 @@ main .banner .caption p mark{
 .about{
 	margin: auto;
 	width: 1200px;
-	height: 900px;
 }
 .about .top{
 	margin-top:60px ;
@@ -113,4 +112,29 @@ main .banner .caption p mark{
 	line-height: 2.2;
 }
 /*about end*/
+/*service star*/
+main .service{
+	height: 500px;
+	position: relative;
+	background: url(../img/banner2.jpg) no-repeat scroll top left;
+	background-size: 100%;
+}
+main .service h2,main .service p{
+	color: #fff;
+	text-align: center;
+}
+main .service .text2{
+	color: #fff;
+	width: 1200px;
+	margin: auto;
+}
+.text2 .left{
+	width: 500px;
+	float: left;
+}
+.text2 .right{
+	width: 500px;	
+	float: right;
+}
+/*service end*/
 /*main end*/
