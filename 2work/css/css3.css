@@ -114,7 +114,9 @@ main .banner .caption p mark{
 }
 .about .bottom .text ul li{
 	counter-increment:testname 1;
-	margin-left:20px ;
+	left: 40px;
+	position: relative;
+	cursor: pointer;
 }
 .about .bottom .text ul li::before{
 	content:counter(testname);
@@ -124,15 +126,25 @@ main .banner .caption p mark{
 	border-radius: 100%;
 	position: absolute;
 	text-align: center;
-	left: 0;
+	right: 600px;
+	line-height: 1.5em;
+	bottom: 0.5em;
+	transition:transform .5s;
+	transform: translate(0px);
+}
+.about .bottom .text ul li:hover::before{
+	transform: translate(0.5em);
 }
 /*about end*/
 /*service star*/
 main .service{
-	height: 500px;
+	min-height: 700px;
 	position: relative;
 	background: url(../img/banner2.jpg) no-repeat scroll top left;
-	background-size: 100%;
+	background-size:cover;
+}
+main .service h2{
+	padding-top: 100px;
 }
 main .service h2,main .service p{
 	color: #fff;
@@ -146,6 +158,12 @@ main .service .text2{
 .text2 .left{
 	width: 500px;
 	float: left;
+}
+.service i,.service h3{
+	display: inline-block;
+}
+.text2 .left h3,.text2 .left i {
+	float: right;
 }
 .text2 .right{
 	width: 500px;	
