@@ -110,6 +110,21 @@ main .banner .caption p mark{
 	width: 580px;
 	float: right;
 	line-height: 2.2;
+	
+}
+.about .bottom .text ul li{
+	counter-increment:testname 1;
+	margin-left:20px ;
+}
+.about .bottom .text ul li::before{
+	content:counter(testname);
+	width: 20px;
+	height: 20px;
+	border: 1px dashed #000;
+	border-radius: 100%;
+	position: absolute;
+	text-align: center;
+	left: 0;
 }
 /*about end*/
 /*service star*/
@@ -136,5 +151,6 @@ main .service .text2{
 	width: 500px;	
 	float: right;
 }
+
 /*service end*/
 /*main end*/
