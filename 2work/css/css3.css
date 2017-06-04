@@ -16,6 +16,7 @@ a{
 }
 body{
 	min-height: 1400px;
+	background-color: #fff;
 }
 /*header star*/
 header .container{
@@ -89,22 +90,29 @@ main .banner .caption p mark{
 /*banner end*/
 /*about star*/
 .about{
+	width: 100%;
+	background-color: #fff;
+}
+.about2{
 	margin: auto;
 	width: 1200px;
+	padding-bottom:30px ;
+
 }
-.about .top{
+.abou2 .top{
 	margin-top:60px ;
 	margin-bottom: 60px;
 	text-align: center;
 }
-.about .top h2{
+.about2 .top h2,.about2 .top p{
 	font-family: "微软雅黑";
+	text-align: center;
 }
-.about .bottom img{
+.about2 .bottom img{
 	width:588px;
 	float: left;
 }
-.about .bottom .text{
+.about2 .bottom .text{
 	position: relative;
 	bottom: 20px;
 	width: 580px;
@@ -112,13 +120,13 @@ main .banner .caption p mark{
 	line-height: 2.2;
 	
 }
-.about .bottom .text ul li{
+.about2 .bottom .text ul li{
 	counter-increment:testname 1;
 	left: 40px;
 	position: relative;
 	cursor: pointer;
 }
-.about .bottom .text ul li::before{
+.about2 .bottom .text ul li::before{
 	content:counter(testname);
 	width: 20px;
 	height: 20px;
@@ -132,42 +140,38 @@ main .banner .caption p mark{
 	transition:transform .5s;
 	transform: translate(0px);
 }
-.about .bottom .text ul li:hover::before{
+.about2 .bottom .text ul li:hover::before{
 	transform: translate(0.5em);
 }
 /*about end*/
 /*service star*/
 main .service{
-	min-height: 700px;
+	min-height: 900px;
 	position: relative;
+	bottom: 300px;
+	z-index: -1;
 	background: url(../img/banner2.jpg) no-repeat scroll top left;
 	background-size:cover;
 }
 main .service h2{
-	padding-top: 100px;
+	padding-top: 340px;
 }
-main .service h2,main .service p{
+main .service h2,main .service #h3{
 	color: #fff;
 	text-align: center;
 }
-main .service .text2{
+.service li{
+	line-height: 30px;
 	color: #fff;
-	width: 1200px;
-	margin: auto;
-}
-.text2 .left{
-	width: 500px;
 	float: left;
+	width: 48%;
+	margin-right: 4%;
+	text-align: right;
 }
-.service i,.service h3{
-	display: inline-block;
-}
-.text2 .left h3,.text2 .left i {
-	float: right;
-}
-.text2 .right{
-	width: 500px;	
-	float: right;
+
+.service li:nth-child(2n){
+	margin-right: 0px;
+	text-align: left;
 }
 
 /*service end*/
