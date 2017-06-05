@@ -205,5 +205,13 @@ main .service h2,main .service #h3{
 .case figure:hover img{
 	transform: scale(1.2) rotate(3deg);
 }
+.case figure figcaption{
+	
+	width:250px ;
+	height: 150px;
+	background-color: rgba(255,255,255,0.5);
+	position: absolute;
+	z-index: 2;
+}
 /*case end*/
 /*main end*/
