@@ -179,6 +179,31 @@ main .service h2,main .service #h3{
 	margin-right: 0px;
 	text-align: left;
 }
-
+.service li:hover i{
+	color: red;
+}
 /*service end*/
+/*case star*/
+.case{
+	position: relative;
+	bottom: 250px;
+	width: 1200px;
+	margin: auto;
+	text-align: center;
+}
+.case figure{
+	margin-right:0px ;
+	width:260px;
+	height: 300px;
+	float: left;
+	overflow: hidden;
+}
+.case figure img{
+	width:100% ;
+	transition:all 0.5s;
+}
+.case figure:hover img{
+	transform: scale(1.2) rotate(3deg);
+}
+/*case end*/
 /*main end*/
