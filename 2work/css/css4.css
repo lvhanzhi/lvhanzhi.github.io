@@ -258,13 +258,53 @@ main .service h2,main .service #h3{
 	height: 500px;
 	background-image:url(../img/android-1869510_1920.jpg) ;
 }
-.contact .contact_auto{
-	position: relative;
-	width: 1200px;
-
+.contact_auto{
+		position: absolute;
+		text-align: center;
+		width: 100%;
 }
-.contact .contact_auto h2,.contact .contact_auto p{
-	text-align: center;
+.contact_auto h2{
+	padding-top:50px ;
+}
+.xia{
+	width: 1200px;
+	margin: auto;
+}
+.contact_left{
+	text-align: left;
+	width: 49%;
+	float: left;
+	line-height: 30px;
+}
+.contact_right{
+	float: right;
+	width: 49%;
+}
+.contact_right input,.contact_right textarea{
+	width: 500px;
+	height: 40px;
+	margin-bottom: 5px;
+	margin-top: 25px;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	padding-left:10px ;
+	background-color: rgba(255,255,255,0.5);
+	
+}
+::-webkit-input-placeholder{
+	color: #000;
+}
+::-moz-placeholder{
+	color: #000;
+}
+.contact_right textarea{
+	height: 60px;
 }
 /*contact end*/
 /*main end*/
+/*footer*/
+footer{
+	text-align: center;
+	padding: 10px;
+}
