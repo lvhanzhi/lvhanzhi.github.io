@@ -58,9 +58,6 @@ header.on{
 	transition: all .5s;
 	color: #fff;
 }
-.container nav ul li.active a{
-	color: deepskyblue;
-}
 .container nav ul li a:hover{
 	color: deepskyblue;
 }
