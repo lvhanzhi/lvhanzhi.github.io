@@ -1,0 +1,101 @@
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+ul{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+.content{
+	width: 1200px;
+	margin: auto;
+}
+/*header star*/
+header{
+	width: 100%;
+	height: 50px;
+
+}
+header .content .top_left{
+	float: left;
+}
+header .content .top_right{
+	float: right;
+}
+header .top_right ul li{
+	float: left;
+	position: relative;
+	right: 25px;
+	bottom: 80px;
+	width: 100px;
+	border-left: 1px solid rgba(0,0,0,0.2);
+	text-align: center;
+	padding: 25px 10px;
+	border-top:3px solid #fff;
+}
+header .top_right ul li:hover{
+	border-top:3px solid cornflowerblue ;
+}
+header .top_right ul li:last-child{
+	border-right: 1px solid rgba(0,0,0,0.2);
+}
+.top_right ul li a{
+	color: #000;
+}
+/*header end*/
+/*main star*/
+/*s1 star*/
+.s1{
+	width: 100%;
+	height: 450px;
+	background-image: url(../images/banner2.jpg);
+	background-size: cover;
+}
+.s1 .content{
+	position: relative;
+	left: 618px;
+	top: 0px;
+	color: #fff;
+}
+.s1 .content h2{
+	line-height:185px;
+}
+.s1 .content .img a:hover img{
+	position: relative;
+	bottom:77px;
+}
+.s1 .content .img{
+	width: 240px;
+	height: 70px;
+	overflow: hidden;
+	
+}
+.s1 .content .p2{
+	color: rgba(200,200,200,1);
+	line-height: 70px;
+	display: inline-block;
+}
+.s1 .content .p2 a{
+	color: #fff;
+}
+/*s1 end*/
+/*s2 star*/
+.s2 figure{
+	float: left;
+	position: relative;
+}
+.s2 figure figcaption{
+	color: #fff;
+	line-height: 32px;
+	position: absolute;
+	text-align: center;
+	top: 156px;
+	width: 320px;
+	height: 32px;
+	background-color:rgba(255,255,255,0.5);
+}
+/*s2 end*/
+/*main end*/
