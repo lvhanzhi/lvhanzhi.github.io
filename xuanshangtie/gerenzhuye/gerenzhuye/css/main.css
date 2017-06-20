@@ -705,7 +705,12 @@ body{
     text-align: center;
     height: 280px;
 }
-
+.hobby_img_div h1 a{
+	color: #fff;
+}
+.hobby_img_div h1 a:hover{
+	color: #000;
+}
 .spinner{
     width: 230px;
     height: 230px;
