@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>快捷键练习</title>
+		<script src="html5plus://ready"></script>
+		<link rel="stylesheet" type="text/css" href="../../html/11吕涵之/styles/css1.css"/>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<img src="../../html/061work/001.JPG"/><br />
+		<div id="d1">
+			<a href="#d1"></a>
+			<ul>
+				<nav></nav>
+				<input type="button" name="" id="" value="Who is e" onclick="WhoisE()"/>
+				<li></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			function WhoisE () {
+				var e;
+				e = document.getElementsByClassName("classA");
+				e = document.getElementsByTagName("div");
+				e = document.getElementById("d1");
+				e.setAttribute("align","center");
+				e.setAttribute("data-test","2");
+				e.style.fontFamily="微软雅黑";
+				e.style.backgroundImage="url(img/HBuilder.png)";
+				e.style.cssText="background-image: url(img/HBuilder.png);";
+				switch (e.style.display){
+					case "-webkit-box":
+						break;
+					default:
+						break;
+				}
+				if (e.getAttribute("class")!="classA") {
+					e.className="classA";
+				}
+				e.innerHTML="<font color='#CCCCCC'></font>";
+				e = document.getElementById("a1");
+				e.href="#a1";
+				e.target="_blank";
+				e = new Image();
+				e.src="img/HBuilder.png";
+				e = window.indexedDB || window.webkitIndexedDB || window.msIndexedDB || window.mozIndexedDB;
+				if (typeof(e)!="undefined") {
+					e.open("test");
+				}
+				var head = document.getElementsByTagName("head")[0];
+				with (head){
+					var l = lastElementChild;
+					removeChild(l);
+				}
+				e = document.createElement("link");
+				e.rel="stylesheet";
+				e.type="text/css";
+				e.href="test.css";
+				head.appendChild(e);
+				var ss="e is ";
+				if (e.getAttribute("data-test")==null) {
+					ss=ss+e.outerHTML;
+				} else{
+					ss=ss+"unknow";
+				}
+				alert(ss)
+			}
+			addEventListener("DOMContentLoaded",function () {
+				finishLesson(1)
+			})
+ }
+		</script>
+	</body>
+</html>
