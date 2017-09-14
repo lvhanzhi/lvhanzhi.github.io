@@ -1,0 +1,18 @@
+div{
+	width: 800px;
+	margin: 0 auto;
+}
+h2,h3{
+	text-align: center;
+}
+p{
+	text-indent: 2em;
+	line-height: 2em;
+}
+body{
+	background-color: #000;
+	color: #fff;
+}
+a{
+	color: #fff;
+}
