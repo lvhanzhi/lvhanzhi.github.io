@@ -31,6 +31,7 @@
 			var Banner=document.getElementById("banner");
 			var s=parseInt(Math.random()*4);
 			Banner.style.backgroundImage="url(img/"+pictures[s]+")";
+			var int=self.setInterval("bianhuan()",3000);
 		function bianhuan () {
 			var picture="1.jpg|2.jpg|3.jpg|4.jpg";
 			var pictures=picture.split("|");
