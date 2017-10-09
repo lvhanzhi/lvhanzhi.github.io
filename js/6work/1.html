@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color:rgb(6,29,35);
+			}
+			#text{
+				position:relative;
+			}
+		</style>
+	</head>
+	<body onload="star()">
+		<div id="text">
+			
+		</div>
+		<script type="text/javascript">
+//			//定义一个时间对象
+//			var day=new Date();//注意:使用关键字new，Date()的首字母必须大写。 
+//			document.write(day.toLocaleTimeString()+"<br>");//已有初始值：当前时间(当前电脑系统时间)
+//			//如果要自定义初始值,有两种方法
+//			//1
+//			var day1=new Date("2014,5,5");
+//			document.write(day1.toLocaleString()+"<br>");
+//			//2
+//			var day2=new Date("Oct 1,2012");
+//			document.write(day2.toLocaleTimeString()+"<br>");
+//			//Date对象中处理时间和日期的常用方法：
+//			//1.get/setFullYear()返回/设置年份，用四位数表示。
+//			var mydate=new Date();
+//			document.write(mydate.getFullYear()+"<br>");
+//			mydate.setFullYear("2015");
+//			document.write(mydate.getFullYear()+"<br>");
+//			//2.getDay() 返回星期，返回的是0-6的数字
+//			var day3=new Date();
+//			var weekday=["星期天","星期一","星期二","星期三","星期四","星期五","星期六"];
+//			var mynum=day3.getDay();
+//			document.write(weekday[mynum]+"<br>");
+//			document.write(day3.getMonth()+1+"月"+"<br>");
+//			//3.get/setTime() 返回/设置时间，单位毫秒数，计算从 1970 年 1 月 1 日零时到日期对象所指的日期的毫秒数。
+//			document.write(day3.getTime()+"<br>");
+//			day3.setTime(day3.getTime()-60*60*1000);
+//			document.write(day3);
+			function star () {
+				var day=new Date();
+			var h=day.getHours();
+			var m=day.getMonth();
+			var s=day.getSeconds();
+			m=check(m);
+			s=check(s);
+			function check (i) {
+				if(i<10){
+					i="0"+i;
+				}
+				return i;
+			}
+			document.getElementById("text").style.fontSize="200px";
+			document.getElementById("text").style.color="white";
+			document.getElementById("text").style.textAlign="center";
+			document.getElementById("text").innerHTML=h+":"+m+":"+s;
+			document.getElementById("text").style.top="200px";
+			t=setTimeout("star()",500);
+			}
+		</script>
+	</body>
+</html>
