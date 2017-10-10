@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<style type="text/css">
+			body{
+				background-color:rgb(6,29,35);
+			}
+			#text{
+				position:relative;
+			}
+			.inputs{
+				position: absolute;
+				bottom: 10%;
+				left: 40%;
+			}
+			input{
+				width: 100px;
+				height: 50px;
+				background-color: rgb(6,29,35);
+				border:none;
+				color:#fff;
+			}
+			#alarm_area{
+				display: none;
+			}
+			#sech_area{
+				margin-top: 15%;
+				margin-left:26% ;
+				display: none;
+			}
+			#timer_area{
+				display: none;
+			}
+			#sech_area input[type="button"]{
+				width: 100px;
+				height: 100px;
+				border: 1px solid rgba(255,255,255,.5);
+				border-radius: 100%;
+				margin-left: 100px;
+				outline:none;
+			}
+			#sech_area input{
+				text-align: center;
+			}
+			#sech_area input[type="text"]{
+				width:350px ;
+				height: 200px;
+				font-size: 50px;
+				margin-left: 200px;
+			}
+		</style>
+</head>
+<body>
+	<div id="text"></div>
+	<div class="inputs">
+		<input type="button" name="alarm" id="alarm" value="闹钟" onclick="alarm_star()"/>
+		<input type="button" name="sech" id="sech" value="秒表" onclick="sech_star()"/>
+		<input type="button" name="timer" id="timer" value="计时器" onclick="time_star()"/>
+	</div>
+	<div id="alarm_area"></div>
+	<div id="sech_area">
+		<input type="text" name="alarm_text" id="alarm_text"/><br />
+		<input type="button" name="alarm_star" id="alarm_star" value="开始" onclick="timer_star()"/>
+		<input type="button" name="alarm_end" id="alarm_end" value="结束" onclick="timer_end()"/>
+		<input type="button" name="alarm_reset" id="alarm_reset" value="重置" onclick="timer_reset()"/>
+	</div>
+	<div id="timer_area"></div>
+	<script type="text/javascript">
+		function star () {
+			var day=new Date();
+			var h=day.getHours();
+			var m=day.getMonth();
+			var s=day.getSeconds();
+			m=check(m);
+			s=check(s);
+			function check (i) {
+				if(i<10){
+					i="0"+i;
+				}
+				return i;
+			}
+			document.getElementById("text").style.fontSize="200px";
+			document.getElementById("text").style.color="white";
+			document.getElementById("text").style.textAlign="center";
+			document.getElementById("text").innerHTML=h+":"+m+":"+s;
+			document.getElementById("text").style.top="200px";
+			
+			}
+			setInterval("star()",500);
+			function alarm_star() {
+				document.getElementById("text").style.display="none";
+				document.getElementById("sech_area").style.display="none";
+				document.getElementById("timer_area").style.display="none";
+				document.getElementById("alarm_area").style.display="block";
+			}
+			function sech_star() {
+				document.getElementById("text").style.display="none";
+				document.getElementById("timer_area").style.display="none";
+				document.getElementById("alarm_area").style.display="none";
+				document.getElementById("sech_area").style.display="block";
+				
+			}
+			function time_star() {
+				document.getElementById("text").style.display="none";
+				document.getElementById("sech_area").style.display="none";
+				document.getElementById("alarm_area").style.display="none";
+				document.getElementById("time_area").style.display="block";
+			}
+			//秒表
+			var int;
+				var hour,minute,second;
+				hour=minute=second=millisecond=0;
+				var millisecond=0;
+				function timer_reset(){
+					window.clearInterval(int);
+					hour=minute=second=0;
+					document.getElementById("alarm_text").value='00:00:00:0000';
+				}
+				function timer_star() {
+					int=setInterval(timer,50);
+				}
+				function timer() {
+					millisecond+=50;
+					if(millisecond==1000){
+						second+=1;
+						millisecond=0;
+					}
+					if(second==60){
+						minute+=1;
+						second=0;
+					}
+					if(minute==60){
+						hour+=1;
+						minute=0;
+					}
+					document.getElementById("alarm_text").value=hour+":"+minute+":"+second+":"+millisecond;
+				}
+				function  timer_end() {
+					window.clearInterval(int);
+				}
+				document.getElementById("alarm_text").style.top="30%";
+	</script>
+</body>
+</html>

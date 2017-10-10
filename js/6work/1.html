@@ -12,7 +12,7 @@
 			}
 		</style>
 	</head>
-	<body onload="star()">
+	<body >
 		<div id="text">
 			
 		</div>
@@ -61,8 +61,9 @@
 			document.getElementById("text").style.textAlign="center";
 			document.getElementById("text").innerHTML=h+":"+m+":"+s;
 			document.getElementById("text").style.top="200px";
-			t=setTimeout("star()",500);
+			
 			}
+			setInterval("star()",500);
 		</script>
 	</body>
 </html>
