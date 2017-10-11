@@ -1,58 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <title>计时器</title>
-    <script>
-        var hour,minute,second;//时 分 秒
-        hour=minute=second=0;//初始化
-        var millisecond=0;//毫秒
-        var int;
-        function Reset()//重置
-        {
-            window.clearInterval(int);
-            millisecond=hour=minute=second=0;
-            document.getElementById('timetext').value='00时00分00秒000毫秒';
-        }
- 
-        function start()//开始
-        {
-            int=setInterval(timer,50);
-        }
- 
-        function timer()//计时
-        {
-            millisecond=millisecond+50;
-            if(millisecond>=1000)
-            {
-                millisecond=0;
-                second=second+1;
-            }
-            if(second>=60)
-            {
-                second=0;
-                minute=minute+1;
-            }
- 
-            if(minute>=60)
-            {
-                minute=0;
-                hour=hour+1;
-            }
-            document.getElementById('timetext').value=hour+'时'+minute+'分'+second+'秒'+millisecond+'毫秒';
- 
-        }
- 
-        function stop()//暂停
-        {
-            window.clearInterval(int);
-        }
-    </script>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<style type="text/css">
+#countdown{
+  width:20%;
+  margin:40px auto ;
+  font-size:80px;
+  color: #777
+}
+	</style>
 </head>
 <body>
-<div style="text-align: center">
-    <input type="text" id="timetext" value="00时00分00秒" readonly><br>
-    <button type="button" onclick="start()">开始</button> <button type="button" onclick="stop()">暂停</button> <button type="button" onclick="Reset()">重置</button>
-</div>
+	<input type="text" name="time_text" id="time_text" value="" />
+	<input type="button" name="time_yes" id="time_yes" value="确定" onclick="star()"/>
+	<div id='countdown'></div>
+	<script type="text/javascript">
+		function star () {
+			var t=document.getElementById("time_text").value;
+		
+		count=t;
+		var counter = setInterval(function timerDown() {
+    count = count - 1;
+    if (count === -1) {
+        clearInterval(counter);
+        return;
+    }
+
+    var seconds = count % 60,
+        minutes = Math.floor(count / 60),
+        hours = Math.floor(minutes / 60);
+    minutes %= 60;
+    hours %= 60;
+  
+  if ( minutes < 10) {
+    
+    minutes = '0' + minutes;
+  }
+  
+  if ( hours < 10 ) {
+    
+    hours = '0' + hours;
+  }
+  
+  if ( seconds < 10 ) {
+    
+    seconds = '0' + seconds;
+  }  
+	
+    document.getElementById("countdown").innerHTML = hours + ":" + minutes + ":" + seconds; 
+} , 1000)
+		if(hours==0&&minutes==0&&seconds==0){
+			clearInterval(counter);
+		}
+		}
+	</script>
 </body>
 </html>

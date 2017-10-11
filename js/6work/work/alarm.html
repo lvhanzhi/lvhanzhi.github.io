@@ -6,6 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Document</title>
 	<style type="text/css">
+			#alarm_area input{
+				border: 1px solid #fff;
+				text-align: center;
+			}
 			body{
 				background-color:rgb(6,29,35);
 			}
@@ -26,6 +30,7 @@
 			}
 			#alarm_area{
 				display: none;
+				color: #fff;
 			}
 			#sech_area{
 				margin-top: 15%;
@@ -34,8 +39,10 @@
 			}
 			#timer_area{
 				display: none;
+				margin-top: 28%;
+				margin-left:26% ;
 			}
-			#sech_area input[type="button"]{
+			#sech_area input[type="button"],#timer_input2 input,#qiuye_gb{
 				width: 100px;
 				height: 100px;
 				border: 1px solid rgba(255,255,255,.5);
@@ -45,6 +52,7 @@
 			}
 			#sech_area input{
 				text-align: center;
+			
 			}
 			#sech_area input[type="text"]{
 				width:350px ;
@@ -52,6 +60,57 @@
 				font-size: 50px;
 				margin-left: 200px;
 			}
+			/*秒表结束*/
+			/*计时器*/
+			#countdown{
+
+  font-size:80px;
+  color: #fff;
+}
+#timeh_text,#timem_text,#times_text{
+	width: 200px;
+	height: 80px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	text-align: center;
+	font-size: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.maohao{
+	color: #fff;
+	font-size: 50px;
+}
+#timer_input{
+	position: absolute;
+	top: 30%;
+	left: 25%;
+}
+#countdown{
+	position:absolute ;
+	top: 25%;
+	left: 39%;
+}
+#qiuye_gb{
+	position: absolute;
+	top: 64%;
+	left: 40%;
+}
+#haha{
+	position: absolute;
+	top: 35%;
+	left: 26%;
+}
+#haha input{
+	width: 200px;
+	height: 100px;
+	font-size: 50px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: none;
+	outline: none;
+}
 		</style>
 </head>
 <body>
@@ -61,15 +120,38 @@
 		<input type="button" name="sech" id="sech" value="秒表" onclick="sech_star()"/>
 		<input type="button" name="timer" id="timer" value="计时器" onclick="time_star()"/>
 	</div>
-	<div id="alarm_area"></div>
+	<div id="alarm_area">
+		<span id='yanshi_time'></span><br/>
+		<audio src='http://cctv3.qiniudn.com/tbhdqx.mp3' preload='auto' id='music'>
+</audio>
+		<div id="haha">
+			<input type='number'  id='qiuye_shiz' size='1' min='0' max="23"><span class="maohao">:</span>
+<input type='number' id='qiuye_fenz' size='1' min='0' max="59"><span class="maohao">:</span>
+<input type='number' id='qiuye_miaoz' size='1' min='0' max="59">
+		</div>
+<input type='button' value='关闭闹钟' id='qiuye_gb' size=2 >
+	</div>
 	<div id="sech_area">
 		<input type="text" name="alarm_text" id="alarm_text"/><br />
 		<input type="button" name="alarm_star" id="alarm_star" value="开始" onclick="timer_star()"/>
 		<input type="button" name="alarm_end" id="alarm_end" value="结束" onclick="timer_end()"/>
 		<input type="button" name="alarm_reset" id="alarm_reset" value="重置" onclick="timer_reset()"/>
 	</div>
-	<div id="timer_area"></div>
+	<div id="timer_area">
+		<div id="timer_input">
+			<input type="text" name="timeh_text" id="timeh_text" /><span class="maohao">:</span>
+			<input type="text" name="timem_text" id="timem_text" /><span class="maohao">:</span>
+			<input type="text" name="times_text" id="times_text" />
+		</div>
+		<div id="timer_input2">
+			<input type="button" name="time_yes" id="time_yes" value="确定" onclick="js_star()"/>
+			<input type="button" name="time_stop" id="time_stop" value="暂停" onclick="js_stop()"/>
+			<input type="button" name="time_no" id="time_no" value="取消" onclick="js_end()"/>
+		</div>
+		<div id='countdown'></div>
+	</div>
 	<script type="text/javascript">
+		music.pause();
 		function star () {
 			var day=new Date();
 			var h=day.getHours();
@@ -108,13 +190,14 @@
 				document.getElementById("text").style.display="none";
 				document.getElementById("sech_area").style.display="none";
 				document.getElementById("alarm_area").style.display="none";
-				document.getElementById("time_area").style.display="block";
+				document.getElementById("timer_area").style.display="block";
 			}
 			//秒表
 			var int;
 				var hour,minute,second;
 				hour=minute=second=millisecond=0;
 				var millisecond=0;
+				document.getElementById("alarm_text").value='00:00:00:0000';
 				function timer_reset(){
 					window.clearInterval(int);
 					hour=minute=second=0;
@@ -143,6 +226,94 @@
 					window.clearInterval(int);
 				}
 				document.getElementById("alarm_text").style.top="30%";
+				//秒表结束
+					function js_star () {
+			document.getElementById("timer_input").style.display="none";
+			var h=document.getElementById("timeh_text").value;
+			var m=document.getElementById("timem_text").value;
+			var s=document.getElementById("times_text").value;
+		count=h*3600+m*60+s;
+		var counter = setInterval(function timerDown() {
+    count = count - 1;
+    if (count === -1) {
+        clearInterval(counter);
+        return;
+    }
+
+    var seconds = count % 60,
+        minutes = Math.floor(count / 60),
+        hours = Math.floor(minutes / 60);
+    minutes %= 60;
+    hours %= 60;
+  
+  if ( minutes < 10) {
+    
+    minutes = '0' + minutes;
+  }
+  
+  if ( hours < 10 ) {
+    
+    hours = '0' + hours;
+  }
+  
+  if ( seconds < 10 ) {
+    
+    seconds = '0' + seconds;
+  }  
+    document.getElementById("countdown").innerHTML = hours + ":" + minutes + ":" + seconds; 
+} , 1000)
+		if(hours==0&&minutes==0&&seconds==0){
+			clearInterval(counter);
+		}
+		}
+		function js_end () {
+			document.getElementById("timer_input").style.display="block";
+		}
+		//闹钟
+		qiuye_shiz=document.getElementById('qiuye_shiz').value,
+qiuye_fenz=document.getElementById('qiuye_fenz').value,
+qiuye_miaoz=document.getElementById('qiuye_miaoz').value;
+window.onload=function(){
+var input=document.getElementsByTagName('input');
+var gb=document.getElementById('qiuye_gb');
+for(i=0;i<input.length;i++){
+	input[i].oninput=function(){
+	qiuye_shiz=document.getElementById('qiuye_shiz').value,
+	qiuye_fenz=document.getElementById('qiuye_fenz').value,
+	qiuye_miaoz=document.getElementById('qiuye_miaoz').value;
+	}
+}
+function showtime(){
+	var time=new Date();
+	var minute=time.getMinutes();
+	var hou=time.getHours();
+	var sec=time.getSeconds();
+	var content=document.getElementById('yanshi_time');
+	content.innerHTML=''+add_o(hou)+' : '+add_o(minute)+' : '+add_o(sec);
+//      var d1=hou>=qiuye_shiz&&minute>=qiuye_fenz&&sec>=qiuye_miaoz;
+//      var d2=hou>=qiuye_shiz&&minute>qiuye_fenz;
+//      var d3=hou>qiuye_shiz;
+	if(hou==qiuye_shiz&&sec==qiuye_miaoz&&minute==qiuye_fenz){
+	if(!music.play()){music.play();}//响铃
+        content.style.color='red';//改变字体颜色为红色
+    }
+	else if(qiuye_shiz==24){
+		music.pause();content.style.color='black';
+	}
+//else{music.pause();content.style.color='black';}//同理
+}
+showtime();
+
+function add_o(m){
+	if(m<10){return '0'+m;}
+	else{return m;}
+}
+
+var timer=setInterval(showtime,1000);
+gb.onclick=function(){
+	qiuye_shiz=24;
+}}
+
 	</script>
 </body>
 </html>
