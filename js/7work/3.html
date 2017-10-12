@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>打字效果</title>
+		<style type="text/css">
+			#p1{
+				
+				position: absolute;
+				right: 0;
+				top: 200px;
+			}
+			#p2{
+				color: yellow;
+				position: absolute;
+				right: 0;
+				top: 500px;
+			}
+			body{
+				background:url(2017-10-12_165705.jpg) no-repeat;
+				background-size: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="p1">哈哈哈哈哈哈哈哈哈哈</p>
+		<p id="p2">我是黄字</p>
+		<script type="text/javascript">
+			function star (bq,time,loop) {
+				var name=bq;
+				var name_text=name.innerText;
+				var loop=loop||false;
+				name.innerText="";
+				var i=0;
+				var a=setInterval(function(){
+					if(i<name_text.length){
+						name.innerText+=name_text[i];
+					}
+					else{
+						clearInterval(a);
+						var ci=0;
+						var b=setInterval(function() {
+							name.style.right=+ci+'px';
+							ci+=1;
+						var kuan=document.body.clientWidth-150;
+						if((ci+18)==kuan){
+//							name.style.visibility="hidden";
+								var n=0;
+							var c=setInterval(function(){
+								name.innerText=name_text.slice(n,name_text.length);
+								n++;
+							},100);
+						}
+						},10);
+					}
+					i++;
+				},time);
+			}
+			var p1=document.getElementById("p1");
+			var p2=document.getElementById("p2");
+			star(p1,200,true);
+			star(p2,200,true);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>打字效果</title>
+		<style type="text/css">
+			p{
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<p>哈哈哈哈哈哈哈哈哈哈</p>
+		<script type="text/javascript">
+			function star (bq,time,loop) {
+				var name=bq;
+				var name_text=name.innerText;
+				var loop=loop||false;
+				name.innerText="";
+				var i=0;
+				var a=setInterval(function(){
+					if(i<name_text.length){
+						name.innerText+=name_text[i];
+					}
+					else{
+						if(loop){
+							i=-1;
+							name.innerText="";
+						}
+						else{
+							clearInterval(a);
+						}
+					}
+					i++;
+				},time);
+			}
+			var p1=document.querySelector("p");
+			star(p1,200,true);
+		</script>
+	</body>
+</html>
