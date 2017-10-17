@@ -83,6 +83,15 @@
 						
 				}(i+1)));
 			}
+			function redirect()
+{  
+  var loc = location.href.split(':');
+  if(loc[0]=='http')
+        {  
+        location.href='https:'+loc[1];  
+        }
+}                      
+onload=redirect  
 		</script>
 	</body>
 </html>
