@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>时间</title>
+		<script src="../../../jq/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="time.css"/>
+		<link rel="stylesheet" type="text/css" href="alarm.css"/>
+		<link rel="stylesheet" type="text/css" href="sech.css"/>
+		<link rel="stylesheet" type="text/css" href="timer.css"/>
+	</head>
+	<body>
+		<!--开场时间-->
+		<div id="text"></div>
+		<!--底下菜单-->
+		<div class="inputs">
+			<input type="button" name="alarm" id="alarm" value="闹钟" onclick="alarm_star()"/>
+			<input type="button" name="sech" id="sech" value="秒表" onclick="sech_star()"/>
+			<input type="button" name="timer" id="timer" value="计时器" onclick="timer_star()"/>
+		</div>
+		<!--闹钟-->
+		<div id="alarm_area">
+			<span id='alarm_time'></span><br/>
+			<audio src='西瓜JUN - 忘记.mp3' preload='auto' id='music'></audio>
+			<div id="alarm_inputs">
+				<input type='tel' id='qiuye_shiz' size='1' min='0' max="23" placeholder="00" class="qiuye"><span class="maohao">:</span>
+				<input type='tel' id='qiuye_fenz' size='1' min='0' max="59" placeholder="00" class="qiuye"><span class="maohao">:</span>
+				<input type='tel' id='qiuye_miaoz' size='1' min='0' max="59" placeholder="00" class="qiuye">
+			</div>
+			<input type='button' value='关闭闹钟' id='qiuye_gb' size=2>
+		</div>
+		<!--闹钟结束-->
+		<!--秒表-->
+		<div id="sech_area">
+			<input type="text" name="alarm_text" id="alarm_text"/><br />
+			<input type="button" name="alarm_star" id="alarm_star" value="开始" onclick="sech2_star()"/>
+			<input type="button" name="alarm_end" id="alarm_end" value="结束" onclick="sech_end()"/>
+			<input type="button" name="alarm_reset" id="alarm_reset" value="重置" onclick="sech_reset()"/>
+		</div>
+		<!--秒表结束-->
+		<!--计时器-->
+		<div id="timer_area">
+			<div id="timer_input">
+				<input type="text" name="timeh_text" id="timeh_text" /><span class="maohao">:</span>
+				<input type="text" name="timem_text" id="timem_text" /><span class="maohao">:</span>
+				<input type="text" name="times_text" id="times_text" />
+			</div>
+			<div id="timer_input2">
+				<input type="button" name="time_yes" id="time_yes" value="确定" onclick="js_star()" />
+				<input type="button" name="time_stop" id="time_stop" value="暂停" onclick="js_stop()" />
+				<input type="button" name="time_no" id="time_no" value="取消" onclick="js_end()" />
+			</div>
+		<div id='countdown'></div>
+		</div>
+		<!--计时器结束-->
+		<!--首页js-->
+		<script src="time.js" type="text/javascript" charset="utf-8"></script>
+		<!--闹钟js-->
+		<script src="alarm.js" type="text/javascript" charset="utf-8"></script>
+		<!--秒表js-->
+		<script src="sech.js" type="text/javascript" charset="utf-8"></script>
+		<!--计时器js-->
+		<script src="timer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
