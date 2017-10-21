@@ -1,98 +1,26 @@
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>作用域和闭包</title>
-		<style type="text/css">
-			body {
-				background-color:whitesmoke;
-			}
-			*{
-				margin: 0;
-				padding: 0;
-			}
-			.logo{
-				width: 200px;
-				height: 200px;
-				float: left;
-			}
-			.logo img{
-				width: 100px;
-				margin-top:20% ;
-				margin-left:25% ;
-			}
-			.inputs{
-				width: 200px;
-				height: 800px;
-			}
-			input {
-				flex: 1 1 auto;
-				background-color: rgba(0,0,0,0);
-				padding: 20px;
-				border: 1px solid #f7f7f7;
-				text-align: center;
-				text-transform: uppercase;
-				position: relative;
-				overflow: hidden;
-				transition: 0.3s;
-				float: left;
-				width: 200px;
-			}
-			input:hover{
-				border: 1px solid black;
-			}
-			iframe{
-				border: none;
-				position: absolute;
-				left: 200px;
-				top:0px;
-				width: 1500px;
-				height: 100%;
-			}
-			
-		</style>
-	</head>
-	<body>
-		<div class="inputs">
-			<div class="logo">
-				<img src="../../html/1work/1work2/stylelint.svg"/>
-			</div>
-			<input value="慕课网" type="button"/>
-			<input value="百度" type="button"/>
-			<input value="淘宝" type="button"/>
-			<input value="网易" type="button"/>
-			<input value="京东" type="button"/>
-			<input value="人民网" type="button"/>
-			<input value="聚美优品" type="button"/>
-
-		</div>
-		<iframe name="s" id="s"></iframe>
-		<script type="text/javascript">
-			var obtn=document.querySelectorAll("input");
-			for(var i=0;i<obtn.length;i++){
-				obtn[i].addEventListener("click",(function (index) {
-					return function(e){
-						if(index==1) window.open('http://www.imooc.com/','s')
-						else if(index==2) window.open('https://www.baidu.com','s')
-						else if(index==3) window.open('https://www.taobao.com','s')
-						else if(index==4) window.open('https://www.163.com/','s')
-						else if(index==5) window.open('https://www.jd.com/?cu=true&utm_source=haosou-search&utm_medium=cpc&utm_campaign=t_262767352_haosousearch&utm_term=5512152820_0_23b3d4b724374ac29768f63ee90c7f9e','s')
-						else if(index==6) window.open('https://www.people.com.cn/','s')
-						else if(index==7) window.open('https://sh.jumei.com/?referer=360_mz&utm_content=mz&utm_medium=nav&utm_source=360','s')
-					};
-						
-				}(i+1)));
-			}
-			function redirect()
-{  
-  var loc = location.href.split(':');
-  if(loc[0]=='http')
-        {  
-        location.href='http:'+loc[1];  
-        }
-}                      
-onload=redirect  
-		</script>
-	</body>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+</head>
+<body>
+	<a id="link" href="#baidu" value="这个是链接，你感觉如何">IE事件处理程序</a>
+<script type="text/javascript">
+    var oLink=document.getElementById("link");
+    oLink.attachEvent("onclick",clickHandler);
+    function clickHandler () {
+        document.write("go");
+        var event = event||window.event;
+        alert(this);
+        alert(event.type);
+        alert(event.srcElement.getAttribute("value"));
+        //object window
+    }
+    //删除事件处理
+//  oLink.detachEvent("onclick",clickHandler);
+</script>
+</body>
 </html>
