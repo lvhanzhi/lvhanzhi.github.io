@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>360导航双11效果</title>
+		<style type="text/css">
+			body {
+  background-color: #333;
+}
+
+.wrapper {
+  margin: auto;
+  height: 600px;
+  width: 600px;
+  background-color: #555;
+}
+
+.pendulum-stick {
+  position: relative;
+  margin: auto;
+  width: 2px;
+  height: 250px;
+  border-radius: 0 0 20% 20%;
+  border: 2px solid rgba(250,188,78);
+  background-color: rgb(250,188,78);
+  transform-origin: top;
+  animation-name: pendulum;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes pendulum {
+  0% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+.circle {
+  position: relative;
+  top: 200px;
+  left: -145px;
+  width: 300px;
+  height: 200px;
+  background-image:url("t01e8449bd29e7679c6.png");
+
+  &::before {
+    position: absolute;
+    left: 78px;
+    top: -17px;
+    width: 30px;
+    height: 12px;
+    content: "";
+    background-color: #776b1f;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+  }
+}
+
+
+
+
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+  <div class="pendulum-stick">
+    <div class="circle"></div>
+
+    
+  </div>
+</div>
+	</body>
+</html>
