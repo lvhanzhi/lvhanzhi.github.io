@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -7,8 +8,15 @@
 		<style type="text/css">
 			body {
 				background-image: url(360导航.png);
-				background-size:1560px;
+				background-size: 100%;
 			}
+			
+			.wrapper {
+				margin: auto;
+				height: 600px;
+				width: 600px;
+			}
+			
 			.pendulum-stick {
 				top:-20px;
 				position: relative;
@@ -24,6 +32,7 @@
 				animation-iteration-count: infinite;
 				animation-timing-function: ease-in-out;
 			}
+			
 			@keyframes pendulum {
 				0% {
 					transform: rotate(20deg);
@@ -35,6 +44,7 @@
 					transform: rotate(20deg);
 				}
 			}
+			
 			.circle {
 				position: relative;
 				top: 300px;
@@ -42,7 +52,6 @@
 				width: 300px;
 				height: 200px;
 				background-image: url("t01e8449bd29e7679c6.png");
-
 				&::before {
 					position: absolute;
 					left: 78px;
@@ -54,36 +63,15 @@
 					border: 2px solid rgba(0, 0, 0, 0.8);
 				}
 			}
-			.img{
-				position: absolute;
-				top: 45px;
-				left: 170px;
-			}
-			.wrapper{
-				display: none;
-			}
 		</style>
 	</head>
 
 	<body>
-		<img class="img" onclick="star()" src="t0169cae88796676b61.gif" alt="" />
 		<div class="wrapper">
 			<div class="pendulum-stick">
-				<a href="http://gouwu.360.cn/zt/z1111"><div class="circle"></div></a>
+				<div class="circle"></div>
 			</div>
 		</div>
-		<script type="text/javascript">
-			var img=document.querySelector(".img");
-			var wrapper=document.querySelector(".wrapper");
-			img.onclick=function(){
-				img.style.display="none";
-				wrapper.style.display="block";
-				setTimeout(function() {
-					img.style.display="block";
-					wrapper.style.display="none";
-				},10000);
-			}
-		</script>
 	</body>
 
 </html>
