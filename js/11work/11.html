@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">		
+		<link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.css" rel="stylesheet">
+		<style type="text/css">
+			body{
+				margin-top: -21px;
+			}
+			.menu{
+				width: 100%;
+				height: 50px;
+				background-color: cornflowerblue;
+				color: #fff;
+			}
+			.menu h4{
+				line-height: 50px;
+				margin-left: 20px;
+			}
+			.menu h4 i{
+				margin-right: 20px;
+			}
+			nav{
+				background-color: cornflowerblue;
+				width: 20%;
+				margin-top: -16px;
+				display: none;
+			}
+			nav ul{
+				list-style: none;
+			}
+			nav ul li{
+				height: 50px;
+				line-height: 50px;
+				color: #fff;
+			}
+			#ul{
+				display:none;
+				margin-top: -30px;
+				
+			}
+			#ul li{
+				height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="menu">
+			<h4><i class="fa fa-bars" aria-hidden="true"></i>Pure js menu</h4>
+		</div>
+		<nav>
+			<ul>
+				<li id="li">Item 1 <span id="span">&rsaquo;</span>
+					<ul id="ul">
+						<li>sub-item 1</li>
+						<li>sub-item 2</li>
+						<li>sub-item 3</li>
+					</ul>
+				</li>
+				<li>Item 2 &rsaquo;</li>
+				<li>Item 3 &rsaquo;</li>
+				<li>Item 4 &rsaquo;</li>
+			</ul>
+		</nav>
+		<script type="text/javascript">
+			var a=0;
+			var b=0;
+			var h4=document.querySelector("h4");
+			var i=document.querySelector("i");
+			var nav=document.querySelector("nav");
+			var li=document.getElementById("li");
+			var ul=document.getElementById("ul");
+			var span=document.getElementById("span");
+			h4.addEventListener("click",function() {
+				a+=90;
+				i.style.transform="rotate("+a+"deg)";
+				if(a/90%2==0){
+					span.innerHTML="&rsaquo;";
+					nav.style.display="none";
+					ul.style.display="none";
+					li.style.height="50px";
+					b+=1;
+				}
+				else{
+					nav.style.display="block";
+				}
+			});
+			li.addEventListener("click",function(){
+					b+=1;
+					
+				if(b%2==0){
+					span.innerHTML="&rsaquo;";
+					ul.style.display="none";
+					li.style.height="50px";
+				}
+				else{
+					span.innerHTML="∨";
+					li.style.height="100px";
+					ul.style.display="block";
+				}
+			});
+		</script>
+	</body>
+</html>
