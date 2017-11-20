@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table id="table" border="1" cellspacing="0" cellpadding="5" width="500px">
+			<tr>
+				<th>学号</th>
+				<th>姓名</th>
+				<th>删除</th>
+			</tr>
+			<tr>
+				<td>20160307110</td>
+				<td>张三</td>
+				<td><a href="#" onclick="shan(this)">删除</a></td>
+			</tr>
+			<tr>
+				<td>20160307111</td>
+				<td>李四</td>
+				<td><a href="#" onclick="shan(this)">删除</a></td>
+			</tr>
+			<tr>
+				<td>20160307112</td>
+				<td>二狗</td>
+				<td><a href="#" onclick="shan(this)">删除</a></td>
+			</tr>
+			<tr>
+				<td>20160307113</td>
+				<td>王五</td>
+				<td><a href="#" onclick="shan(this)">删除</a></td>
+			</tr>
+		</table>
+		<input type="button" name="add" id="add" value="添加" onclick="add()"/>
+		<script type="text/javascript">
+			window.onload=function (){
+				var trs=document.querySelectorAll("tr");
+				for(var i=1;i<trs.length;i++){
+					color_tr(trs[i]);
+				}
+			}
+			function color_tr (trss) {
+				trss.onmousemove=function() {
+					trss.style.backgroundColor="red";
+				}
+				trss.onmouseout=function () {
+					trss.style.backgroundColor="#fff";
+				}
+			}
+			var num=0;
+			function add () {
+				num++;
+				var table=document.getElementById("table");
+				var tr=document.createElement("tr");
+				var td1=document.createElement("td");
+				var td22=prompt("请输入姓名");
+				var td2=document.createElement("td");
+				td2.innerHTML=td22;
+				var td3=document.createElement("td");
+				td1.innerHTML="20160307113"+num;
+				td3.innerHTML="<a href='#' onclick='shan(this)'>删除</a>";
+				table.appendChild(tr);
+				tr.appendChild(td1);
+				tr.appendChild(td2);
+				tr.appendChild(td3);
+				for (var i =1; i <trs.length; i++) {  
+            color_tr(trs[i]);  
+        }   
+			}
+			function shan(chu){
+				var chu=chu.parentNode.parentNode;
+				chu.parentNode.removeChild(chu);
+			}
+		</script>
+	</body>
+</html>
