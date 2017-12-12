@@ -1,9 +1,49 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="utf-8" />
 		<title></title>
+		<style type="text/css">
+            #tored{
+            	background-color: red;
+            }
+            #toorange{
+            	background-color: orange;
+            }
+
+		</style>
 	</head>
-	<body>
+	<body id="">
+		<input type="button" id="red" value="红色" />
+		<input type="button" id="orange" value="橘色"/>
+
+		
+		<script type="text/javascript">
+         var btnRed = document.getElementById('red');
+         var btnOrange = document.getElementById('orange');
+         
+         btnRed.addEventListener('click',setRed);
+         btnOrange.addEventListener('click',setOrange);
+
+         function setRed(){
+         	document.body.id = "tored";
+         	var id=document.body.id;
+         	localStorage.setItem('getId',id);
+         }
+         function setOrange(){
+         	document.body.id = "toorange";
+         	var id=document.body.id;
+         	localStorage.setItem('getId',id);
+         }
+           
+           
+        var curId = localStorage.getItem('getId');
+        if(curId != null){
+        	document.body.id = curId;
+        }
+           
+            
+		</script>
 	</body>
 </html>
