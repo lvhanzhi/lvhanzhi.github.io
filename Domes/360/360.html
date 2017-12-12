@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style type="text/css">
+		html{
+			width: 100%;
+			height: 100px;
+		}
+		body{
+			width: 100px;
+			height: 100px;
+		}
+		.bg{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			transform: rotate(45deg);
+			position: absolute;
+			color: greenyellow;
+			right: -70px;
+			top: 20px;
+		}
+		.bg p{
+			text-shadow: 1px 0px rgba(255,255,255,1);
+		}
+		.a{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			background-color: green;
+		}
+		.b{
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 2;
+			
+		}
+		img{
+			width: 55px;height: 55px;
+		}
+		.img1{
+			animation: mymove 1s ;/*infinite*/
+			animation-fill-mode :forwards ;
+		}
+		.img2{
+			width: 100px;height: 100px;
+		}
+		@-webkit-keyframes mymove{
+			/*from{width: 55px;height: 55px;}
+			to{width: 100px;height: 100px;}*/
+			0% {width: 55px;height: 55px;}
+			100% {width: 100px;height: 100px;}
+		}
+		.b1{
+			height: 200px;
+			width: 200px;
+			background-color: #fff;
+			float: right;
+		}
+		.white{
+			background-color: white;
+			transform: rotate(45deg);
+			width: 164px;
+			height: 120px;
+			position: absolute;
+			/*top:29px;
+			right: 10px;*/
+			top: 3px;
+			right: -6px;
+		}
+		.white1{
+			animation: white 1s ;
+			animation-fill-mode :forwards ;
+		}
+		.white2{
+			top: 29px;
+			right:13px;
+		}
+		@-webkit-keyframes white{
+			from{top: 0px;
+			right: -5px;}
+			to{top: 29px;
+			right:13px;}
+			/*from{top: 29px;
+			right: 10px;}
+			to{top: 0px;
+			right: -5px;}*/
+			
+		}
+		.aa{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 0;
+			right: 100px;
+			background-color: #fff;
+		}
+		.bb{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 100px;
+			right: 0px;
+			background-color: #fff;
+		}
+		span{
+			position: absolute;
+			top:18px;
+			right: 25px;
+			cursor: pointer;
+			z-index: 2;
+			padding:10px;
+		}
+		.span1{
+			animation: span 1s ;
+			animation-fill-mode :forwards ;
+		}
+		.span2{
+			top: 55px;
+			right: 65px;
+		}
+		@-webkit-keyframes span{
+			/*from{top: 60px;
+			right: 70px;}
+			to{top:27px;
+			right: 32px;}*/
+			from{top:18px;
+			right: 25px;}
+			to{
+				top: 55px;
+			right: 65px;
+			}
+		}
+		.over{
+			width: 300px;
+			height: 300px;
+			position: absolute;
+			z-index: 2;
+			background-color: #fff;
+			top: 0;
+			right: -300px;
+		}
+	</style>	
+	</head>
+	<body>
+		<div class="a">
+		</div>
+			<div class="bg">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打野<br />
+			求奶求buff</p>
+		</div>
+		<div class="b">
+			<img src="img/bgc.png"/>
+			<span title="关闭">×</span>
+		</div>
+		<div class="b1">
+			
+		</div>
+		<div class="white">
+			
+		</div>
+		<div class="aa">
+			
+		</div>
+		<div class="bb">
+			
+		</div>
+		<div class="over">
+			
+		</div>
+		<script type="text/javascript">
+			var img=document.querySelector("img");
+			var span=document.querySelector("span");
+			var white=document.querySelector(".white");
+			var barr=document.querySelector("b");
+			img.addEventListener("mouseover",function() {
+				img.classList.toggle("img1");
+				span.classList.toggle("span1");
+				white.classList.toggle("white1");
+			})
+			img.addEventListener("mouseout",function() {
+				img.classList.remove("img1");
+				span.classList.remove("span1");
+				white.classList.remove("white1");
+			})
+			span.addEventListener("mousemove",function() {
+				img.classList.remove("img1");
+				span.classList.remove("span1");
+				white.classList.remove("white1");
+			})
+			span.addEventListener("click",function() {
+				var div=document.querySelectorAll("div");
+				for(var i=0;i<div.length;i++){
+					div[i].style.display="none";
+				}
+			})
+		</script>
+	</body>
+</html>
