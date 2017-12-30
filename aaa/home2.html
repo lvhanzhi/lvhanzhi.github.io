@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>领取红包页面</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			img{
+				width: 100%;
+				height: 100%;
+			}
+			.content .tell_verify{
+			width: 86%;
+			height: 15%;
+			position: absolute;
+			/*background-color: red;*/
+			top: 38%;
+			left: 7%;
+		}
+		.content .tell_verify input[type="number"]{
+			width: 78%;
+			height: 50%;
+			border-radius:15px ;
+			font-size:37px;
+			text-align: center;
+			border: none;
+			display:table;
+			margin: 15% auto 5% auto;
+		}
+		.content .tell_verify input[type="number"]::-webkit-input-placeholder{
+			color:#b0aeae;
+		}
+		.content .tell_verify input[type="submit"]{
+			width:78%;
+			height:42%;
+			border-radius:40px ;
+			font-size: 37px;
+			color: #7f0c1f;
+			background-color:#ffd931 ;
+			border: none;
+			display:table;
+			margin: 0px auto;
+		}
+		.content .explain{
+			position: absolute;
+			bottom: 20%;
+			font-size: 30px;
+			color:#fff;
+			left: 15%;
+		}
+		.content .explain p{
+			margin-bottom: 12px;
+		}
+		/*提示框*/
+		.tooltip{
+			position: absolute;
+			left: 11%;
+		}
+		.tooltip .tooltip_text{
+			background-color:#fdbfce;
+			color:#c2011e;
+			font-size: 35px;
+			padding: 10px 15px;
+			border-radius: 10px;
+			margin-top: 17%;
+		}
+		.tooltip .tooltip_triangle{
+			height: 0;
+			width: 0;
+			border:15px solid rgba(0,0,0,0);
+			border-top: 15px solid #fdbfce;
+			position: absolute;
+			left: 45%;
+			margin-top: -1px;
+		}
+		</style>
+	</head>
+	<body>
+		<img src="img/bg.jpg"/>
+		<div class="content">
+			<div class="tell_verify">
+				<div class="tooltip">
+				<div class="tooltip_text">
+					<p>手机格式不正确</p>
+				</div>
+				<div class="tooltip_triangle"></div>
+			</div>
+				<input type="number" name="text_btn" id="text_btn" placeholder="请输入手机号领取红包" />
+				<input type="submit" id="get_btn" name="get_btn" />
+			</div>
+			<div class="explain">
+				<p>活动说明：</p>
+				<p>1.红包领取时间：2018年1月1日-2018年12月31日</p>
+				<p>2.活动仅限部分用户参加，具体以实际发放为准。</p>
+				<p>3.用户每月限领一个红包，共计可领取12个。</p>
+				<p>4.红包仅限当月领取且有效期为当月，过期不再补发。</p>
+			</div>
+		</div>
+	</body>
+</html>
