@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>滚动简历</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/app.css" />
+</head>
+<body>
+      <div id="page"></div>
+      <div class="loading">
+        <div class="loading-circle_list">
+          <div class="loading-circle loading-circle-left"></div> 
+          <div class="loading-circle loading-circle-center"></div> 
+          <div class="loading-circle loading-circle-right"></div> 
+        </div>
+      </div>
+      <div class="intro">
+        <p class="intro-title">大家好,我叫<b class="intro-name">Cover</b></p>
+        <p class="intro-desc">一名喜爱<b class="intro-job">前端设计</b>的人</p>
+        <button class="intro-button js-start-resume">start</button>
+        <p class="intro-tip">点击按钮-开始滚动页面</p>
+      </div>
+      <div class="content">
+          <div class="layer-horizontal">
+            <div class="cloud"></div>
+            <div class="mountain"></div>
+            <div class="background"></div>
+            <div class="trees"></div>
+            <div class="block block1"></div>
+            <div class="block block2"></div>
+            <div class="project project-1">
+              <h2 class="project-title">项目经验1</h2>
+              <img class="project-img" src="./images/project-demo.png">
+              <div class="project-desc">
+                <h3>项目简介</h3>
+                <p>这是一个耗尽我全身精力瞎掰的一个项目，主要是让学生知道这是做啥的，我还是写两句好了</p>
+                <h3>技术栈</h3>
+                <p>React + Redux + Webpack</p>
+              </div>
+            </div>
+            <div class="project project-2">
+              <h2 class="project-title">项目经验1</h2>
+              <img class="project-img" src="./images/project-demo.png">
+              <div class="project-desc">
+                <h3>项目简介</h3>
+                <p>这是一个耗尽我全身精力瞎掰的一个项目，主要是让学生知道这是做啥的，我还是写两句好了</p>
+                <h3>技术栈</h3>
+                <p>React + Redux + Webpack</p>
+              </div>
+            </div>
+          </div>
+            
+          <div id="people-container">
+            <div class="people"></div>
+          </div>
+        </div>
+  
+  <script src="./js/jquery.js"></script>
+  <script src="./js/resource.js"></script>
+  <script src="./js/scense.js"></script>
+  <script src="./js/me.js"></script>
+  <script src="./js/resume.js"></script>
+</body>
+</html>

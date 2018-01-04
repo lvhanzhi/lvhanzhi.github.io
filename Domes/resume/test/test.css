@@ -1,0 +1,234 @@
+body{
+	background-color: deepskyblue;
+}
+/*loading star*/
+.loading{
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: block;
+}
+.loading .circle{
+	display: inline-block;
+	background-color: #fff;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	margin-right: 10px;
+	animation-name: circle;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+}
+.loading .circle:nth-child(2){
+	animation-delay: 0.2s;
+}
+.loading .circle:nth-child(3){
+	margin-right: 0px;
+	animation-delay: 0.5s;
+}
+@keyframes circle{
+	from{transform:scale(1);background-color: #fff;}
+	to{transform:scale(0.5);background-color: #c1c1c1;}
+}
+/*loading end*/
+
+/*撑开高度*/
+.aaa{
+	height: 19999px;
+	display: none;
+}
+/*content star*/
+/*背景star*/
+.content{
+	display: none;
+}
+.wrapper{
+	width: 40000px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left:0 ;
+}
+.tree{
+	background: url(img/trees.png) repeat scroll top left;
+	width: 100%;
+	height: 253px;
+	position: absolute;
+	bottom:95px;
+	left: 0;
+}
+.cloud{
+	background: url(img/cloud.png) repeat scroll top left;
+	width: 100%;
+	height: 197px;
+	position: absolute;
+	top: 20px;
+	left: 0;
+}
+.mountain{
+	background: url(img/mountain.png) repeat;
+	width: 100%;
+	position: absolute;
+	background-size: auto 800px;
+	height:600px;
+	bottom:99px;
+	left: 0;
+}
+.background{
+	background: url(img/background.png) repeat scroll top left;
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.people{
+	background: url(img/people.png) repeat scroll top left;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	bottom: 86px;
+	left: 0;
+}
+.people1{
+	bottom: 212px;
+}
+/*背景end*/
+/*通知1*/
+.notice{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.star_one{
+	position: absolute;
+	top: 100px;
+	left: 600px;
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+	width: 800px;
+}
+.star_one .text{
+	position: absolute;
+	top: 100px;
+	left: 40px;
+}
+.star_one span{
+	animation-name:flicker ;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	cursor: pointer;
+}
+.star_two{
+	position: absolute;
+	bottom: 96px;
+	left: 1300px;
+}
+.star_two img{
+	width: 100px;
+}
+.star_three{
+	position: absolute;
+	bottom: 87px;
+	left: 3000px;
+}
+.star_three img{
+	width: 200px;
+}
+.star_four{
+	position: absolute;
+	top: 200px;
+	left: 2000px;
+}
+.star_four img{
+	width: 400px;
+}
+.star_four table{
+	position: absolute;
+	top: 60px;
+	left: 40px;
+}
+.star_four table td{
+	padding-bottom: 20px;
+}
+.star_five{
+	position: absolute;
+	top: 200px;
+	left: 3500px;
+	width: 358px;
+	text-align: justify;
+}
+.star_five h2{
+	text-align: center;
+	margin-bottom: 6px;
+}
+.star_five img{
+	width: 400px;
+}
+.star_five .text{
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	float: right;
+}
+.star_five .text h3 a,.star_six .text h3 a{
+	color: #000000;
+	text-decoration: none;
+}
+.star_five .text h3,.star_five .text p{
+	margin-top: 8px;
+	margin-bottom: -5px;
+}
+.star_five .text img{
+	float: left;
+	width: 102px;
+	cursor: pointer;
+}
+.star_six{
+	position: absolute;
+	top: 200px;
+	left:4500px;
+}
+.star_six img,.star_seven img{
+	width: 400px;
+}
+.star_six h2{
+	margin-bottom: 0px;
+}
+.star_six .text{
+	width: 350px;
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	float: right;
+	text-align: center;
+}
+.star_six .text h3,.star_six .text p{
+	margin-bottom: 0;
+	margin-top: 0;
+}
+.star_six .text img{
+	width: 200px;
+	
+}
+.star_seven{
+	position: absolute;
+	top: 200px;
+	left:5500px;
+}
+.star_seven .text{
+	width: 350px;
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	text-align: center;
+}
+@keyframes flicker{
+	from{opacity: 1;}
+	to{opacity: 0.5;}
+}
+/*content end*/

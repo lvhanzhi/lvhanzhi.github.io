@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="test.css" />
+	</head>
+
+	<body>
+		<div class="loading">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</div>
+		<div class="aaa"></div>
+		<div class="content">
+			<div class="wrapper">
+				<div class="cloud"></div>
+				<div class="mountain"></div>
+				<div class="tree"></div>
+				<div class="background"></div>
+				<div class="people"></div>
+			</div>
+			<div class="notice">
+				<div class="star_one">
+					<div class="text">
+						<h2>大家好，我叫吕涵之</h2>
+						<p>一名前端狂热爱好者。</p>
+						<span>点击，了解我</span>
+					</div>
+				</div>
+				<div class="star_two">
+					<img src="img/pipe.png"/>
+				</div>
+				<div class="star_three">
+					<img src="img/ccc.png"/>
+				</div>
+				<div class="star_four">
+					<img src="img/project.png"/>
+					<table border="0" cellspacing="0" cellpadding="">
+						<tr>
+							<td>姓名：吕涵之</td>
+							<td>出生年月：1998.08.23</td>
+						</tr>
+						<tr>
+							<td>性别：女</td>
+							<td>电话：13136239139</td>
+						</tr>
+						<tr>
+							<td><a href="https://github.com/lvhanzhi" target="_blank">github</a> <a href="http://blog.csdn.net/qq_35484998?ref=toolbar" target="_blank">csdn</a></td>
+							<td>邮箱：1541860665@qq.com</td>
+						</tr>
+						<tr>
+							<td>专业：软件技术</td>
+							<td>学校：浙江邮电职业技术学院</td>
+						</tr>
+						<tr>
+							<td colspan="2">参加编程有关的智友社社团、acm工作室。</td>
+						</tr>
+					</table>
+				</div>
+				<div class="star_five">
+					<img src="img/project.png"/>
+					<div class="text">
+						<h2>项目经验1</h2>
+						<a href="https://lvhanzhi.github.io/try.github.io/xiangmu/%E6%9C%8D%E5%8A%A1%E5%A4%96%E5%8C%85/mui/home.html" target="_blank"><img src="img/one.jpg"/></a>
+						<h3><a href="https://lvhanzhi.github.io/try.github.io/xiangmu/%E6%9C%8D%E5%8A%A1%E5%A4%96%E5%8C%85/mui/home.html" target="_blank">DCloud学习APP</a></h3>
+						<p>责任描述：项目前端部分负责人以及后端登录注册</p>
+						<p>项目描述：Dcloud框架的初学者可以通过App系统的学习Dcloud，还能直接在APP上发布求职信息和招聘信息。</p>
+						<p>主要技术：mui、php实现后端</p>
+					</div>
+				</div>
+				<div class="star_six">
+					<img src="img/project.png"/>
+					<div class="text">
+						<h2>项目经验2</h2>
+						<a href="https://lvhanzhi.github.io/Domes/over/home.html" target="_blank"><img src="img/two.jpg"/></a>
+						<h3><a href="https://lvhanzhi.github.io/Domes/over/home.html" target="_blank">教师管理信息系统</a></h3>
+						<p>责任描述：项目前端部分负责人</p>
+						<p>项目描述：教师的个人信息，专业负责人审核。</p>
+						<p>主要技术：html5、css3、js和后端javaweb</p>
+					</div>
+				</div>
+				<div class="star_seven">
+					<img src="img/project.png"/>
+					<div class="text">
+						<h2>其他作品</h2>
+						<a href="https://lvhanzhi.github.io/Domes/red-packet/home.html" target="_blank">微信红包</a><br />
+						<a href="https://lvhanzhi.github.io/html/2work/4.html" target="_blank">企业官方网页</a><br />
+						<a href="https://lvhanzhi.github.io/html/11%E5%90%95%E6%B6%B5%E4%B9%8B/index.html" target="_blank">电脑管家</a><br />
+						<a href="https://lvhanzhi.github.io/try.github.io/xiangmu/ds1/home2.html" target="_blank">购物网站</a><br />
+						<a href="https://lvhanzhi.github.io/try.github.io/xiangmu/muke1/1.html" target="_blank">学习网站</a>
+						<p>等等</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var aaa = document.querySelector(".aaa");
+			var content = document.querySelector(".content");
+			var loading = document.querySelector(".loading");
+			var span = document.querySelector(".star_one span");
+			var people = document.querySelector(".people");
+			var notice = document.querySelector(".notice");
+			var cloud = document.querySelector(".cloud");
+			var mountain = document.querySelector(".mountain");
+			var tree = document.querySelector(".tree");
+			window.onload = function() {
+				loading.style.display = "none";
+				content.style.display = "block";
+			}
+			span.addEventListener("click", function() {
+				aaa.style.display = "block";
+				window.scrollTo(0, 0);
+				span.style.display = "none";
+			})
+
+			var sign = 80; //定义默认的向上滚与向下滚的边界
+			window.onscroll = window.onresize = function() {
+				var oScrollTop = $(window).scrollTop();
+				//下面这句主要是获取网页的总高度，主要是考虑兼容性所以把Ie支持的documentElement也写了，这个方法至少支持IE8  
+				var htmlHeight = document.body.scrollHeight || document.documentElement.scrollHeight;
+				//clientHeight是网页在浏览器中的可视高度，  
+				var clientHeight = document.body.clientHeight || document.documentElement.clientHeight;
+				//scrollTop是浏览器滚动条的top位置，  
+				var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+				//通过判断滚动条的top位置与可视网页之和与整个网页的高度是否相等来决定是否加载内容；  
+				people.style.left = scrollTop / 20 + "px";
+				cloud.style.left = -scrollTop / 60 + "px";
+				mountain.style.left = -scrollTop / 30 + "px";
+				notice.style.left = -scrollTop / 4 + "px";
+				tree.style.left = -scrollTop / 4 + "px";
+				if(oScrollTop > sign) {
+					sign = oScrollTop; //更新scrollTop
+					//console.log('向下');
+					people.style.backgroundPosition = "200px 0px";
+
+					function on() {
+						people.style.backgroundPosition = "400px 0px";
+						people.style.backgroundPosition = "600px 0px";
+						people.style.backgroundPosition = "800px 0px";
+						people.style.backgroundPosition = "0px 0px";
+					}
+					setTimeout(on, 200);
+				}
+				if(oScrollTop < sign) {
+					sign = oScrollTop //更新scrollTop
+					//console.log('向上');
+					people.style.backgroundPosition = "200px 200px";
+
+					function up() {
+						people.style.backgroundPosition = "400px 200px";
+						people.style.backgroundPosition = "600px 200px";
+						people.style.backgroundPosition = "0px 200px";
+					}
+					setTimeout(up, 200);
+				}
+				if(people.style.left>="200px"&&people.style.left<="225px"){
+					people.classList.add("people1");
+				}
+				if(people.style.left>"225px"||people.style.left<"200px"){
+					people.classList.remove("people1");
+				}
+			}
+		</script>
+	</body>
+
+</html>
